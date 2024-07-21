@@ -161,5 +161,29 @@ window.addEventListener('scroll', () => {
     lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
 });
 </script>
+    <script>
+// Получаем модальное окно
+var modal = document.getElementById("photoModal");
+
+// Получаем изображение и вставляем его в модальное окно
+var img = document.querySelector(".team-photo");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+img.onclick = function(){
+    modal.style.display = "block";
+    modalImg.src = this.src;
+    captionText.innerHTML = this.alt;
+}
+
+// Получаем элемент <span>, чтобы закрыть модальное окно
+var span = document.getElementsByClassName("close")[0];
+
+// Когда пользователь нажимает на <span> (x), закрываем модальное окно
+span.onclick = function() { 
+    modal.style.display = "none";
+}
+</script>
+
 </body>
 </html>
