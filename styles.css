@@ -238,6 +238,12 @@ body {
 .price-list li {
     margin-bottom: 10px; /* Добавляем отступ между элементами списка */
 }
+/* Стили для логотипа */
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
 /* Стили для навигации */
 nav {
     position: relative;
