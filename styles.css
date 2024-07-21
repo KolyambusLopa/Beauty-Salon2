@@ -121,3 +121,22 @@ button {
 button:hover {
     background-color: #e05d9c;
 }
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: white; /* Убедитесь, что фон шапки непрозрачный */
+    z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
+    transition: transform 0.3s ease-in-out; /* Плавный переход для скрытия и отображения */
+}
+
+header.hidden {
+    transform: translateY(-100%);
+}
+
+body {
+    margin: 0;
+    padding-top: 60px; /* Учитываем высоту фиксированного заголовка, чтобы не перекрывать содержимое */
+}
+
