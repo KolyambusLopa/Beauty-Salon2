@@ -8,51 +8,51 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-   <header>
-    <div class="container">
-        <h1><a href="#home" class="logo">Raspberry Salon</a></h1>
-        <nav>
-            <ul id="menu" class="menu">
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#team">Наша команда</a></li>
-                <li><a href="#prices">Цены</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-            <div class="hamburger" id="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </nav>
-    </div>
-</header>
-
+    <header>
+        <div class="container">
+            <h1><a href="#home" class="logo">Raspberry Salon</a></h1>
+            <nav>
+                <ul id="menu" class="menu">
+                    <li><a href="#home">Главная</a></li>
+                    <li><a href="#services">Услуги</a></li>
+                    <li><a href="#team">Наша команда</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
 
     <main>
         <section id="booking" class="section">
-    <div class="container">
-        <h2>Запись на прием</h2>
-        <form action="https://formspree.io/f/xdknakyg" method="POST">
-            <label for="name">Имя:</label>
-            <input type="text" id="name" name="name" required>
+            <div class="container">
+                <h2>Запись на прием</h2>
+                <form action="https://formspree.io/f/xdknakyg" method="POST">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
 
-            <label for="email">Электронная почта:</label>
-            <input type="email" id="email" name="email" required>
+                    <label for="email">Электронная почта:</label>
+                    <input type="email" id="email" name="email" required>
 
-           <label for="phone">Телефон:</label>
-<input type="tel" id="phone" name="phone" pattern="\+?\d{8,11}" maxlength="12" required title="Введите телефонный номер в формате: +12345678 или 12345678">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" name="phone" pattern="\+?\d{8,11}" maxlength="12" required title="Введите телефонный номер в формате: +12345678 или 12345678">
 
-            <label for="date">Дата приема:</label>
-            <input type="date" id="date" name="date" required>
+                    <label for="date">Дата приема:</label>
+                    <input type="date" id="date" name="date" required>
 
-            <label for="message">Комментарий:</label>
-            <textarea id="message" name="message"></textarea>
+                    <label for="message">Комментарий:</label>
+                    <textarea id="message" name="message"></textarea>
 
-            <button type="submit">Отправить заявку</button>
-        </form>
-    </div>
-</section>
+                    <button type="submit">Отправить заявку</button>
+                </form>
+            </div>
+        </section>
+
         <section id="home" class="section home-section">
             <div class="overlay">
                 <div class="container">
@@ -81,47 +81,43 @@
             </div>
         </section>
 
-       <section id="prices" class="section">
-    <div class="container">
-        <h2>Цены</h2>
-        <ul class="price-list">
-            <li>Реснички - 20 Euro</li>
-            <li>Бровки - 25 Euro</li>
-            <li>Лами реснички - 35 Euro</li>
-            <li>Макияж - 30 Euro</li>
-        </ul>
-    </div>
-</section>
+        <section id="prices" class="section">
+            <div class="container">
+                <h2>Цены</h2>
+                <ul class="price-list">
+                    <li>Реснички - 20 Euro</li>
+                    <li>Бровки - 25 Euro</li>
+                    <li>Лами реснички - 35 Euro</li>
+                    <li>Макияж - 30 Euro</li>
+                </ul>
+            </div>
+        </section>
 
+        <section id="team" class="section">
+            <div class="container">
+                <h2>Наша команда</h2>
+                <div class="team-member">
+                    <img src="katerina.jpg" alt="Катерина Малинина" class="team-photo">
+                    <h3>Катерина Малинина</h3>
+                    <p>Мастер с 4-х летним стажем в работе с бровками и ресничками. Катерина также специализируется на создании идеального макияжа для любых мероприятий.</p>
+                </div>
+            </div>
 
-       <section id="team" class="section">
-    <div class="container">
-        <h2>Наша команда</h2>
-        <div class="team-member">
-            <img src="katerina.jpg" alt="Катерина Малинина" class="team-photo">
-            <h3>Катерина Малинина</h3>
-            <p>Мастер с 4-х летним стажем в работе с бровками и ресничками. Катерина также специализируется на создании идеального макияжа для любых мероприятий.</p>
-        </div>
-    </div>
-
-    <!-- Модальное окно для изображения -->
-<div id="imageModal" class="modal">
-    <span class="close" id="closeModal">&times;</span>
-    <img class="modal-content" id="modalImage">
-    <div id="modalCaption"></div>
-</div>
-
-</section>
-
-
+            <!-- Модальное окно для изображения -->
+            <div id="imageModal" class="modal">
+                <span class="close" id="closeModal">&times;</span>
+                <img class="modal-content" id="modalImage">
+                <div id="modalCaption"></div>
+            </div>
+        </section>
 
         <section id="contact" class="section">
-    <div class="container">
-        <h2>Контакты</h2>
-        <p><strong>Телефон:</strong> 25130922</p>
-        <p><strong>Адрес:</strong> Druvienas 34, Riga</p>
-    </div>
-</section>
+            <div class="container">
+                <h2>Контакты</h2>
+                <p><strong>Телефон:</strong> 25130922</p>
+                <p><strong>Адрес:</strong> Druvienas 34, Riga</p>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -129,123 +125,87 @@
             <p>© 2024 Raspberry Salon. Все права защищены.</p>
         </div>
     </footer>
+
     <script>
-document.querySelector('form').addEventListener('submit', function(event) {
-    const phoneInput = document.getElementById('phone');
-    const phoneValue = phoneInput.value;
-    
-    // Удаляем все символы, кроме цифр и плюс
-    const sanitizedPhone = phoneValue.replace(/[^\d+]/g, '');
-    
-    // Проверяем, начинается ли номер с +
-    let phoneNumber = sanitizedPhone;
-    if (phoneNumber.startsWith('+')) {
-        phoneNumber = phoneNumber.substring(1);
-    }
-    
-    // Проверяем длину номера без +
-    if (phoneNumber.length < 8 || phoneNumber.length > 11) {
-        alert('Номер телефона должен содержать от 8 до 11 цифр (без учета "+").');
-        event.preventDefault();
-    }
-});
-</script>
-<script>
-let lastScrollTop = 0;
-const header = document.querySelector('header');
+        // Обработка номера телефона в форме
+        document.querySelector('form').addEventListener('submit', function(event) {
+            const phoneInput = document.getElementById('phone');
+            const phoneValue = phoneInput.value;
 
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            // Удаляем все символы, кроме цифр и плюс
+            const sanitizedPhone = phoneValue.replace(/[^\d+]/g, '');
 
-    if (currentScroll > lastScrollTop) {
-        // Прокрутка вниз
-        header.classList.add('hidden');
-    } else {
-        // Прокрутка вверх
-        header.classList.remove('hidden');
-    }
-    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-});
-</script>
-    <script>
-// Получаем модальное окно
-var modal = document.getElementById("photoModal");
+            // Проверяем, начинается ли номер с +
+            let phoneNumber = sanitizedPhone;
+            if (phoneNumber.startsWith('+')) {
+                phoneNumber = phoneNumber.substring(1);
+            }
 
-// Получаем изображение и вставляем его в модальное окно
-var img = document.querySelector(".team-photo");
-var modalImg = document.getElementById("img01");
-var captionText = document.getElementById("caption");
+            // Проверяем длину номера без +
+            if (phoneNumber.length < 8 || phoneNumber.length > 11) {
+                alert('Номер телефона должен содержать от 8 до 11 цифр (без учета "+").');
+                event.preventDefault();
+            }
+        });
 
-img.onclick = function(){
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-}
+        // Скролл и скрытие/показ шапки
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
 
-// Получаем элемент <span>, чтобы закрыть модальное окно
-var span = document.getElementsByClassName("close")[0];
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
 
-// Когда пользователь нажимает на <span> (x), закрываем модальное окно
-span.onclick = function() { 
-    modal.style.display = "none";
-}
-</script>
-<script>
-// Получаем элементы гамбургер-меню и меню
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
+            if (currentScroll > lastScrollTop) {
+                // Прокрутка вниз
+                header.classList.add('hidden');
+            } else {
+                // Прокрутка вверх
+                header.classList.remove('hidden');
+            }
+            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+        });
 
-// Добавляем обработчик события клика для гамбургер-меню
-hamburger.addEventListener('click', () => {
-    menu.classList.toggle('active');
-});
-</script>
-<script>
-// Получаем элементы гамбургер-меню и меню
-const hamburger = document.getElementById('hamburger');
-const menu = document.getElementById('menu');
+        // Открытие модального окна
+        const modal = document.getElementById('imageModal');
+        const modalImg = document.getElementById('modalImage');
+        const captionText = document.getElementById('modalCaption');
+        const closeModal = document.getElementById('closeModal');
 
-// Добавляем обработчик события клика для гамбургер-меню
-hamburger.addEventListener('click', (event) => {
-    event.stopPropagation(); // Останавливаем всплытие события
-    menu.classList.toggle('active');
-});
+        document.querySelectorAll('.team-photo').forEach(img => {
+            img.addEventListener('click', () => {
+                modal.style.display = 'block';
+                modalImg.src = img.src;
+                captionText.innerHTML = img.alt;
+            });
+        });
 
-// Закрытие меню при клике вне его области
-document.addEventListener('click', (event) => {
-    if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-        menu.classList.remove('active');
-    }
-});
-</script>
-<script>
-// Получаем элементы модального окна
-const modal = document.getElementById('imageModal');
-const modalImg = document.getElementById('modalImage');
-const captionText = document.getElementById('modalCaption');
-const closeModal = document.getElementById('closeModal');
+        // Закрытие модального окна
+        closeModal.addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
 
-// Обработчик для открытия модального окна при клике на изображение
-document.querySelectorAll('.team-member img').forEach(img => {
-    img.addEventListener('click', () => {
-        modal.style.display = 'block';
-        modalImg.src = img.src;
-        captionText.innerHTML = img.alt;
-    });
-});
+        // Закрытие модального окна при клике на пустую область
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
 
-// Обработчик для закрытия модального окна при клике на крестик
-closeModal.addEventListener('click', () => {
-    modal.style.display = 'none';
-});
+        // Гамбургер-меню
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
 
-// Обработчик для закрытия модального окна при клике на пустую область
-modal.addEventListener('click', (event) => {
-    if (event.target === modal) {
-        modal.style.display = 'none';
-    }
-});
-</script>
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Останавливаем всплытие события
+            menu.classList.toggle('active');
+        });
 
+        // Закрытие меню при клике вне его области
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>
