@@ -127,7 +127,6 @@
     </footer>
 
     <script>
-        // Обработка номера телефона в форме
         document.querySelector('form').addEventListener('submit', function(event) {
             const phoneInput = document.getElementById('phone');
             const phoneValue = phoneInput.value;
@@ -147,8 +146,9 @@
                 event.preventDefault();
             }
         });
+    </script>
 
-        // Скролл и скрытие/показ шапки
+    <script>
         let lastScrollTop = 0;
         const header = document.querySelector('header');
 
@@ -164,25 +164,26 @@
             }
             lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
         });
+    </script>
 
-        // Открытие модального окна
-        const modal = document.getElementById('imageModal');
-        const modalImg = document.getElementById('modalImage');
-        const captionText = document.getElementById('modalCaption');
-        const closeModal = document.getElementById('closeModal');
+    <script>
+        // Получаем модальное окно
+        var modal = document.getElementById("imageModal");
+        var img = document.querySelector(".team-photo");
+        var modalImg = document.getElementById("modalImage");
+        var captionText = document.getElementById("modalCaption");
 
-        document.querySelectorAll('.team-photo').forEach(img => {
-            img.addEventListener('click', () => {
-                modal.style.display = 'block';
-                modalImg.src = img.src;
-                captionText.innerHTML = img.alt;
-            });
-        });
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
 
-        // Закрытие модального окна
-        closeModal.addEventListener('click', () => {
-            modal.style.display = 'none';
-        });
+        var span = document.getElementsByClassName("close")[0];
+
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
 
         // Закрытие модального окна при клике на пустую область
         modal.addEventListener('click', (event) => {
@@ -190,8 +191,9 @@
                 modal.style.display = 'none';
             }
         });
+    </script>
 
-        // Гамбургер-меню
+    <script>
         const hamburger = document.getElementById('hamburger');
         const menu = document.getElementById('menu');
 
@@ -200,7 +202,6 @@
             menu.classList.toggle('active');
         });
 
-        // Закрытие меню при клике вне его области
         document.addEventListener('click', (event) => {
             if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
                 menu.classList.remove('active');
