@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    padding-top: 80px; /* Учитываем высоту шапки, чтобы не перекрывать содержимое */
 }
 
 .container {
@@ -12,227 +11,40 @@ body {
 }
 
 header {
-    background-color: #333; /* Тёмный фон шапки для контраста */
+    background-color: #333; /* Фон шапки */
     color: white; /* Цвет текста */
-    padding: 20px 0; /* Увеличенные отступы для шапки */
-    position: fixed; /* Фиксированное положение шапки */
-    width: 100%; /* Ширина на всю ширину экрана */
+    padding: 20px 0; /* Отступы шапки */
+    position: fixed; /* Фиксированное положение */
+    width: 100%; /* Ширина на всю ширину */
     top: 0;
     z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
-    transition: transform 0.3s ease-in-out; /* Плавный переход для скрытия и отображения */
+    display: flex; /* Используем flexbox */
+    justify-content: space-between; /* Распределяем элементы по горизонтали */
+    align-items: center; /* Выравнивание элементов по вертикали */
 }
 
-header h1 {
-    text-align: center;
-    margin: 0;
-    color: #fff; /* Белый цвет текста для лучшей видимости */
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-    margin: 10px 0 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.section {
-    padding: 100px 0 60px;
-    text-align: center;
-}
-
-.home-section {
-    background: url('background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    color: white;
-}
-
-.home-section .overlay {
-    background: rgba(0, 0, 0, 0.5);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.service-item {
-    background: #f4f4f4;
-    padding: 20px;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 10px 0;
-}
-
-footer p {
-    margin: 0;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-label {
-    margin-top: 10px;
-    font-weight: bold;
-}
-
-input, textarea {
-    margin-top: 5px;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    margin-top: 20px;
-    padding: 10px;
-    font-size: 16px;
-    background-color: #ff69b4;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #e05d9c;
-}
-
-/* Стили для фото мастера */
-.team-member {
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.team-photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-}
-
-.team-photo:hover {
-    transform: scale(1.2);
-}
-
-/* Стили для модального окна */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 60px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.9);
-}
-
-/* Модальное окно - изображение */
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    /* Центрирование изображения по горизонтали и вертикали */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-/* Подпись к изображению (по центру) */
-#modalCaption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-}
-
-/* Закрытие модального окна */
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 40px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-/* Закрытие при наведении */
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-@media only screen and (max-width: 700px){
-    .modal-content {
-        width: 100%;
-    }
-}
-
-.price-list {
-    list-style-type: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем отступы */
-}
-
-.price-list li {
-    margin-bottom: 10px; /* Добавляем отступ между элементами списка */
-}
-
-/* Стили для логотипа */
+/* Логотип */
 .logo {
     color: white;
     text-decoration: none;
+    font-size: 24px;
 }
 
-/* Стили для навигации */
+/* Навигация */
 nav {
-    position: relative;
+    display: flex;
+    flex-grow: 1;
+    justify-content: center; /* Центрирование меню */
 }
 
 .menu {
     display: flex;
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
+/* Элементы меню */
 .menu li {
     margin: 0 15px;
 }
@@ -243,43 +55,146 @@ nav {
     font-weight: bold;
 }
 
-/* Скрытие гамбургер-меню на десктопе */
+/* Кнопка гамбургера */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
 }
 
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
+.bar {
     background-color: white;
-    margin: 4px 0;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
 }
 
-/* Адаптивное меню */
-@media (max-width: 768px) {
+/* Модальное окно */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+#modalCaption {
+    color: #ccc;
+    text-align: center;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Стиль для скрытия шапки при прокрутке вниз */
+header.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Основной стиль */
+main {
+    padding-top: 80px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
+}
+
+.section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Стили для изображений команды */
+.team-member {
+    margin-top: 20px;
+}
+
+.team-photo {
+    border-radius: 50%; /* Круглая фотография */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.team-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для мобильного меню */
+@media screen and (max-width: 768px) {
     .menu {
         display: none;
         flex-direction: column;
         width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
         background-color: #333;
     }
 
-    .menu li {
-        margin: 10px 0;
-        text-align: center;
+    .menu.active {
+        display: flex;
     }
 
     .hamburger {
         display: flex;
     }
-}
-
-/* Показ меню при клике */
-.menu.active {
-    display: flex;
 }
