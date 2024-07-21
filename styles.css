@@ -178,11 +178,12 @@ body {
 }
 
 /* Стили для модального окна */
+/* Модальное окно (скрыто по умолчанию) */
 .modal {
-    display: none; /* Скрываем модальное окно по умолчанию */
+    display: none;
     position: fixed;
-    z-index: 1000;
-    padding-top: 100px;
+    z-index: 1;
+    padding-top: 60px;
     left: 0;
     top: 0;
     width: 100%;
@@ -191,6 +192,7 @@ body {
     background-color: rgba(0, 0, 0, 0.9);
 }
 
+/* Модальное окно - изображение */
 .modal-content {
     margin: auto;
     display: block;
@@ -198,19 +200,21 @@ body {
     max-width: 700px;
 }
 
-.modal-content, .caption {
-    animation-name: zoom;
-    animation-duration: 0.6s;
+/* Подпись к изображению (по центру) */
+#modalCaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
 }
 
-@keyframes zoom {
-    from {transform: scale(0)}
-    to {transform: scale(1)}
-}
-
+/* Закрытие модального окна */
 .close {
     position: absolute;
-    top: 50px;
+    top: 15px;
     right: 35px;
     color: #f1f1f1;
     font-size: 40px;
@@ -218,12 +222,14 @@ body {
     transition: 0.3s;
 }
 
+/* Закрытие при наведении */
 .close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
     cursor: pointer;
 }
+
 
 @media only screen and (max-width: 700px){
     .modal-content {
