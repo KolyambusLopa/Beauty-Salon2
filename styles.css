@@ -175,5 +175,15 @@ body {
 .team-photo:hover {
     transform: scale(1.2);
 }
+/* Удаление точек из списка цен */
+.price-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.price-list li {
+    margin-bottom: 10px; /* Добавляем отступ между элементами списка */
+}
+
 
 
