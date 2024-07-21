@@ -130,5 +130,22 @@ document.querySelector('form').addEventListener('submit', function(event) {
     }
 });
 </script>
+<script>
+let lastScrollTop = 0;
+const header = document.querySelector('header');
+
+window.addEventListener('scroll', () => {
+    const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+
+    if (currentScroll > lastScrollTop) {
+        // Прокрутка вниз
+        header.classList.add('hidden');
+    } else {
+        // Прокрутка вверх
+        header.classList.remove('hidden');
+    }
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
+});
+</script>
 </body>
 </html>
