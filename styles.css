@@ -20,7 +20,7 @@ header {
     z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
     display: flex; /* Используем flexbox */
     justify-content: space-between; /* Распределяем элементы по горизонтали */
-    align-items: center; /* Выравнивание элементов по вертикали */
+    align-items: center; /* Выравниваем элементы по вертикали */
 }
 
 /* Логотип */
@@ -28,6 +28,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 24px;
+    text-align: center; /* Центрирование логотипа */
 }
 
 /* Навигация */
@@ -89,6 +90,7 @@ nav {
     display: block;
     width: 80%;
     max-width: 700px;
+    max-height: 80vh; /* Ограничение высоты */
 }
 
 #modalCaption {
@@ -175,6 +177,8 @@ button:hover {
     border-radius: 50%; /* Круглая фотография */
     cursor: pointer;
     transition: transform 0.3s ease;
+    width: 150px; /* Установите исходный размер фото */
+    height: 150px; /* Установите исходный размер фото */
 }
 
 .team-photo:hover {
