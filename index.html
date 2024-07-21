@@ -189,6 +189,16 @@ span.onclick = function() {
     modal.style.display = "none";
 }
 </script>
+<script>
+// Получаем элементы гамбургер-меню и меню
+const hamburger = document.getElementById('hamburger');
+const menu = document.getElementById('menu');
+
+// Добавляем обработчик события клика для гамбургер-меню
+hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+});
+</script>
 
 </body>
 </html>
