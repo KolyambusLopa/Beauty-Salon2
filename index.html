@@ -109,5 +109,26 @@
             <p>© 2024 Raspberry Salon. Все права защищены.</p>
         </div>
     </footer>
+    <script>
+document.querySelector('form').addEventListener('submit', function(event) {
+    const phoneInput = document.getElementById('phone');
+    const phoneValue = phoneInput.value;
+    
+    // Удаляем все символы, кроме цифр и плюс
+    const sanitizedPhone = phoneValue.replace(/[^\d+]/g, '');
+    
+    // Проверяем, начинается ли номер с +
+    let phoneNumber = sanitizedPhone;
+    if (phoneNumber.startsWith('+')) {
+        phoneNumber = phoneNumber.substring(1);
+    }
+    
+    // Проверяем длину номера без +
+    if (phoneNumber.length < 8 || phoneNumber.length > 11) {
+        alert('Номер телефона должен содержать от 8 до 11 цифр (без учета "+").');
+        event.preventDefault();
+    }
+});
+</script>
 </body>
 </html>
