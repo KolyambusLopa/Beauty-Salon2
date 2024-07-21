@@ -238,6 +238,67 @@ body {
 .price-list li {
     margin-bottom: 10px; /* Добавляем отступ между элементами списка */
 }
+/* Стили для навигации */
+nav {
+    position: relative;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Скрытие гамбургер-меню на десктопе */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Адаптивное меню */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+    }
+
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+}
+
+/* Показ меню при клике */
+.menu.active {
+    display: flex;
+}
 
 
 
