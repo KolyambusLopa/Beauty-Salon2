@@ -11,24 +11,27 @@ body {
 }
 
 header {
-    background-color: #ff69b4;
+    background-color: #ff69b4; /* Розовый цвет шапки */
     color: white;
     padding: 20px 0;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: top 0.3s; /* Плавный переход для скрытия/показывания */
 }
 
 header h1 {
     text-align: center;
     margin: 0;
+    font-size: 1.5em;
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
+    margin: 0;
 }
 
 nav ul li {
@@ -46,6 +49,7 @@ nav ul li a {
     display: none;
     cursor: pointer;
     position: relative;
+    z-index: 1001;
 }
 
 .hamburger .bar {
@@ -55,21 +59,52 @@ nav ul li a {
     margin: 5px 0;
 }
 
+.menu {
+    display: flex;
+    justify-content: center;
+}
+
 .menu.active {
     display: block;
 }
 
-.hidden {
-    display: none;
+header.hidden {
+    top: -80px; /* Высота шапки плюс отступ */
 }
 
 section {
     padding: 60px 0;
 }
 
+.service-item {
+    background-color: #f0f0f0;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.price-list {
+    list-style: none;
+    padding: 0;
+}
+
+.price-list li {
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+.team-member {
+    text-align: center;
+    margin: 20px 0;
+}
+
 .team-photo {
-    width: 100%;
-    max-width: 200px;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Круглая форма */
+    object-fit: cover; /* Обрезка для сохранения пропорций */
     cursor: pointer;
 }
 
@@ -97,11 +132,74 @@ section {
     float: right;
     font-size: 40px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .close:hover,
 .close:focus {
     color: #bbb;
     text-decoration: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+form input,
+form textarea {
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: #ff69b4;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
+}
+
+form button:hover {
+    background-color: #ff4081;
+}
+
+footer {
+    background-color: #ff69b4;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav ul {
+        display: none; /* Скрываем меню по умолчанию на мобильных устройствах */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
 }
