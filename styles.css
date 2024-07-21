@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    padding-top: 80px; /* Учитываем высоту шапки, чтобы не перекрывать содержимое */
 }
 
 .container {
@@ -11,28 +12,27 @@ body {
 }
 
 header {
-    background-color: #333; /* Цвет шапки */
-    color: white;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
+    background-color: #333; /* Тёмный фон шапки для контраста */
+    color: white; /* Цвет текста */
+    padding: 20px 0; /* Увеличенные отступы для шапки */
+    position: fixed; /* Фиксированное положение шапки */
+    width: 100%; /* Ширина на всю ширину экрана */
     top: 0;
-    z-index: 1000;
-    transition: top 0.3s; /* Плавный переход для скрытия/показывания */
+    z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
+    transition: transform 0.3s ease-in-out; /* Плавный переход для скрытия и отображения */
 }
 
 header h1 {
     text-align: center;
     margin: 0;
-    font-size: 1.5em;
-    color: white; /* Цвет названия салона */
+    color: #fff; /* Белый цвет текста для лучшей видимости */
 }
 
 nav ul {
     list-style: none;
     padding: 0;
     text-align: center;
-    margin: 0;
+    margin: 10px 0 0;
 }
 
 nav ul li {
@@ -46,167 +46,240 @@ nav ul li a {
     font-weight: bold;
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
-    position: relative;
-    z-index: 1001;
+.section {
+    padding: 100px 0 60px;
+    text-align: center;
 }
 
-.hamburger .bar {
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-}
-
-.menu {
+.home-section {
+    background: url('background.jpg') no-repeat center center/cover;
+    height: 100vh;
     display: flex;
+    align-items: center;
+    color: white;
+}
+
+.home-section .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
     justify-content: center;
 }
 
-.menu.active {
-    display: block;
-}
-
-header.hidden {
-    top: -80px; /* Высота шапки плюс отступ */
-}
-
-section {
-    padding: 60px 0;
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
 }
 
 .service-item {
-    background-color: #f0f0f0;
-    border-radius: 10px;
+    background: #f4f4f4;
     padding: 20px;
-    margin: 10px;
-}
-
-.price-list {
-    list-style: none;
-    padding: 0;
-}
-
-.price-list li {
-    background-color: #f0f0f0;
     border-radius: 5px;
-    padding: 10px;
-    margin: 5px 0;
 }
 
-.team-member {
+footer {
+    background-color: #333;
+    color: white;
     text-align: center;
-    margin: 20px 0;
+    padding: 10px 0;
 }
 
-.team-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%; /* Круглая форма */
-    object-fit: cover; /* Обрезка для сохранения пропорций */
-    cursor: pointer;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.8);
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    max-width: 90%; /* Устанавливаем максимальную ширину */
-    max-height: 90%; /* Устанавливаем максимальную высоту */
-    width: auto; /* Автоматическая ширина */
-    height: auto; /* Автоматическая высота */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Центрируем изображение */
-}
-
-.close {
-    color: #fff;
-    float: right;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
+footer p {
+    margin: 0;
 }
 
 form {
     display: flex;
     flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
-form label {
-    margin-bottom: 5px;
+label {
+    margin-top: 10px;
     font-weight: bold;
 }
 
-form input,
-form textarea {
-    margin-bottom: 15px;
+input, textarea {
+    margin-top: 5px;
     padding: 10px;
-    border-radius: 5px;
+    font-size: 16px;
     border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-form button {
+button {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
     background-color: #ff69b4;
     color: white;
-    padding: 10px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-form button:hover {
-    background-color: #ff4081;
+button:hover {
+    background-color: #e05d9c;
 }
 
-footer {
-    background-color: #ff69b4;
-    color: white;
+/* Стили для фото мастера */
+.team-member {
     text-align: center;
+    margin-bottom: 20px;
+}
+
+.team-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.team-photo:hover {
+    transform: scale(1.2);
+}
+
+/* Стили для модального окна */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 60px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+}
+
+/* Модальное окно - изображение */
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    /* Центрирование изображения по горизонтали и вертикали */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Подпись к изображению (по центру) */
+#modalCaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
     padding: 10px 0;
+}
+
+/* Закрытие модального окна */
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* Закрытие при наведении */
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.price-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+}
+
+.price-list li {
+    margin-bottom: 10px; /* Добавляем отступ между элементами списка */
+}
+
+/* Стили для логотипа */
+.logo {
+    color: white;
+    text-decoration: none;
+}
+
+/* Стили для навигации */
+nav {
     position: relative;
 }
 
-@media (max-width: 768px) {
-    .container {
-        width: 90%;
-    }
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
 
-    nav ul {
-        display: none; /* Скрываем меню по умолчанию на мобильных устройствах */
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Скрытие гамбургер-меню на десктопе */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+/* Адаптивное меню */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
         flex-direction: column;
         width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
     }
 
-    nav ul.active {
-        display: flex;
+    .menu li {
+        margin: 10px 0;
+        text-align: center;
     }
 
     .hamburger {
-        display: block;
+        display: flex;
     }
+}
 
-    header h1 {
-        font-size: 1.2em;
-    }
+/* Показ меню при клике */
+.menu.active {
+    display: flex;
 }
