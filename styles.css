@@ -11,7 +11,7 @@ body {
 }
 
 header {
-    background-color: #ff69b4; /* Розовый цвет шапки */
+    background-color: #333; /* Цвет шапки */
     color: white;
     padding: 20px 0;
     position: fixed;
@@ -25,6 +25,7 @@ header h1 {
     text-align: center;
     margin: 0;
     font-size: 1.5em;
+    color: white; /* Цвет названия салона */
 }
 
 nav ul {
@@ -123,8 +124,14 @@ section {
 .modal-content {
     margin: auto;
     display: block;
-    width: 80%;
-    max-width: 700px;
+    max-width: 90%; /* Устанавливаем максимальную ширину */
+    max-height: 90%; /* Устанавливаем максимальную высоту */
+    width: auto; /* Автоматическая ширина */
+    height: auto; /* Автоматическая высота */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем изображение */
 }
 
 .close {
