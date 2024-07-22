@@ -6,6 +6,7 @@ body {
     box-sizing: border-box;
 }
 
+/* Шапка */
 header {
     background-color: rgba(0, 0, 0, 0); /* Прозрачный фон шапки */
     color: white; /* Цвет текста */
@@ -36,35 +37,12 @@ header {
     letter-spacing: 1px; /* Расстояние между буквами */
 }
 
-/* Навигация */
-nav {
-    display: flex;
-    align-items: center;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center; /* Центрирование меню */
-}
-
-.menu li {
-    margin: 0 15px;
-}
-
-.menu a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-}
-
 /* Кнопка гамбургера */
 .hamburger {
-    display: none;
+    display: flex;
     flex-direction: column;
     cursor: pointer;
+    z-index: 1100; /* Поверх остальных элементов */
 }
 
 .bar {
@@ -72,6 +50,46 @@ nav {
     height: 3px;
     width: 25px;
     margin: 3px 0;
+}
+
+/* Навигация */
+.nav-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 250px; /* Ширина меню */
+    height: 100%;
+    background-color: black; /* Черный фон */
+    transform: translateX(100%); /* Скрыто за правым краем экрана */
+    transition: transform 0.3s ease; /* Плавное появление */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Поверх других элементов */
+}
+
+.nav-menu.show {
+    transform: translateX(0); /* Показать меню */
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu li {
+    margin: 20px 0;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px; /* Размер шрифта для ссылок */
+    font-weight: bold; /* Жирное начертание */
 }
 
 /* Стили для секции с фоновым изображением */
@@ -148,18 +166,11 @@ button:hover {
 
 /* Стили для мобильного меню */
 @media screen and (max-width: 768px) {
-    .menu {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-    }
-
-    .menu.show {
-        display: flex;
-    }
-
     .hamburger {
         display: flex;
+    }
+
+    .nav-menu {
+        width: 100%; /* Ширина меню на мобильных устройствах */
     }
 }
