@@ -5,13 +5,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburger && menu) {
         hamburger.addEventListener('click', () => {
             menu.classList.toggle('show');
-            hamburger.classList.toggle('active'); // Toggle active class on hamburger
+            hamburger.classList.toggle('active');
         });
 
         document.addEventListener('click', (event) => {
             if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
                 menu.classList.remove('show');
-                hamburger.classList.remove('active'); // Remove active class on hamburger
+                hamburger.classList.remove('active');
             }
         });
     } else {
