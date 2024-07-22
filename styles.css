@@ -1,48 +1,34 @@
-/* Основные стили */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background: url('path/to/your-background-image.jpg') no-repeat center center fixed; /* Замените на путь к вашей фоновому изображению */
+    background-size: cover; /* Чтобы изображение покрывало весь экран */
 }
 
-/* Шапка */
-header {
-    background-color: rgba(0, 0, 0, 0); /* Прозрачный фон шапки */
-    color: white; /* Цвет текста */
-    padding: 0; /* Убираем отступы шапки */
-    position: fixed; /* Фиксированное положение */
-    width: 100%; /* Ширина на всю ширину */
-    top: 0;
-    z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
+.header-container {
     display: flex;
-    justify-content: space-between; /* Распределяем элементы по краям */
-    align-items: center; /* Центрирование элементов по вертикали */
-    padding: 20px; /* Отступы шапки */
-}
-
-/* Логотип */
-.logo-container {
-    text-align: left; /* Выравнивание текста логотипа по левому краю */
-    position: absolute;
-    left: 20px; /* Отступ от левого края */
-    top: 20px; /* Отступ сверху */
+    justify-content: space-between; /* Располагает элементы по краям */
+    align-items: center; /* Центрирует элементы по вертикали */
+    position: absolute; /* Позиционирование поверх фонового изображения */
+    top: 20px; /* Расположение от верхнего края */
+    width: 100%; /* Ширина на всю ширину экрана */
+    padding: 0 20px; /* Отступы от краев */
 }
 
 .logo {
     color: white;
     text-decoration: none;
-    font-size: 36px; /* Увеличенный размер шрифта */
-    font-weight: bold; /* Жирное начертание */
-    letter-spacing: 1px; /* Расстояние между буквами */
+    font-size: 36px; /* Размер шрифта логотипа */
+    font-weight: bold;
 }
 
-/* Кнопка гамбургера */
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    z-index: 1100; /* Поверх остальных элементов */
+    margin-right: 20px; /* Отступ от правого края */
 }
 
 .bar {
@@ -57,120 +43,44 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 250px; /* Ширина меню */
-    height: 100%;
-    background-color: black; /* Черный фон */
-    transform: translateX(100%); /* Скрыто за правым краем экрана */
-    transition: transform 0.3s ease; /* Плавное появление */
+    width: 300px; /* Ширина меню */
+    height: 100vh; /* Высота на весь экран */
+    background-color: rgba(0, 0, 0, 0.9); /* Черный полупрозрачный фон */
+    transform: translateX(100%); /* Меню скрыто за пределами экрана */
+    transition: transform 0.3s ease-in-out; /* Плавное появление меню */
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    z-index: 1000; /* Поверх других элементов */
+    padding-top: 60px; /* Отступ сверху */
+    z-index: 999; /* Меню должно быть поверх других элементов */
 }
 
 .nav-menu.show {
-    transform: translateX(0); /* Показать меню */
+    transform: translateX(0); /* Показываем меню при добавлении класса show */
 }
 
-.menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu li {
-    margin: 20px 0;
-}
-
-.menu a {
+.nav-menu a {
     color: white;
     text-decoration: none;
-    font-size: 24px; /* Размер шрифта для ссылок */
-    font-weight: bold; /* Жирное начертание */
-}
-
-/* Стили для секции с фоновым изображением */
-.hero {
-    background-image: url('images/background.jpg'); /* Укажите путь к вашему изображению */
-    background-size: cover; /* Растягиваем изображение по всей секции */
-    background-position: center; /* Центрируем изображение */
-    height: 100vh; /* Высота секции на весь экран */
-    color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-.hero h1 {
-    font-size: 48px; /* Размер шрифта для заголовка */
-    margin: 0; /* Убираем отступы */
-    font-weight: bold; /* Жирное начертание */
-}
-
-.hero p {
-    font-size: 24px; /* Размер шрифта для текста */
-    margin: 10px 0;
+    font-size: 24px;
+    margin: 20px 0; /* Отступы между пунктами меню */
 }
 
 /* Основной стиль */
 main {
-    padding-top: 100px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
+    padding-top: 80px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
 }
 
-.section {
-    padding: 40px 0;
-    text-align: center;
-}
-
-h2 {
-    margin-bottom: 20px;
-}
-
-/* Форма */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label {
-    margin-top: 10px;
-}
-
-input, textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
+/* Убираем черную полосу, если она есть */
+.header-placeholder {
+    height: 0;
+    margin: 0;
+    padding: 0;
     border: none;
-    border-radius: 4px;
-    cursor: pointer;
 }
 
-button:hover {
-    background-color: #555;
-}
-
-/* Стили для мобильного меню */
 @media screen and (max-width: 768px) {
-    .hamburger {
-        display: flex;
-    }
-
-    .nav-menu {
-        width: 100%; /* Ширина меню на мобильных устройствах */
+    .logo {
+        font-size: 28px; /* Уменьшение размера шрифта на мобильных устройствах */
     }
 }
