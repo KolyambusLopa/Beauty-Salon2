@@ -7,9 +7,9 @@ body {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон шапки */
+    background-color: rgba(0, 0, 0, 0); /* Прозрачный фон шапки */
     color: white; /* Цвет текста */
-    padding: 20px; /* Отступы шапки */
+    padding: 0; /* Убираем отступы шапки */
     position: fixed; /* Фиксированное положение */
     width: 100%; /* Ширина на всю ширину */
     top: 0;
@@ -17,12 +17,15 @@ header {
     display: flex;
     justify-content: space-between; /* Распределяем элементы по краям */
     align-items: center; /* Центрирование элементов по вертикали */
-    padding: 0 20px; /* Отступы от краев */
+    padding: 20px; /* Отступы шапки */
 }
 
 /* Логотип */
 .logo-container {
     text-align: left; /* Выравнивание текста логотипа по левому краю */
+    position: absolute;
+    left: 20px; /* Отступ от левого края */
+    top: 20px; /* Отступ сверху */
 }
 
 .logo {
