@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -5,70 +6,30 @@ body {
     box-sizing: border-box;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center; /* Центрирование содержимого контейнера */
-}
-
 header {
-    background-color: #333; /* Фон шапки */
-    color: white; /* Цвет текста */
-    padding: 20px 0; /* Отступы шапки */
-    position: fixed; /* Фиксированное положение */
-    width: 100%; /* Ширина на всю ширину */
+    position: fixed;
     top: 0;
-    z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Полупрозрачный фон для навигации */
+    color: white;
     display: flex;
-    flex-direction: column;
-    align-items: center; /* Центрирование элементов по вертикали */
-}
-
-.logo-container {
-    text-align: center; /* Центрирование текста логотипа */
-    margin-bottom: 10px; /* Отступ между логотипом и меню */
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    z-index: 1000;
 }
 
 .logo {
-    color: white;
-    text-decoration: none;
     font-size: 24px;
-}
-
-/* Навигация */
-nav {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.menu {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    justify-content: center; /* Центрирование меню */
-    width: 100%;
-    flex-wrap: wrap; /* Для корректного отображения элементов при сужении */
-}
-
-/* Элементы меню */
-.menu li {
-    margin: 0 15px;
-}
-
-.menu a {
-    color: white;
     text-decoration: none;
-    font-weight: bold;
+    color: white;
 }
 
-/* Кнопка гамбургера */
 .hamburger {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-top: 10px; /* Отступ сверху для гамбургера */
 }
 
 .bar {
@@ -78,64 +39,57 @@ nav {
     margin: 3px 0;
 }
 
-/* Модальное окно */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
+nav.menu {
+    display: flex;
     align-items: center;
+}
+
+nav.menu ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav.menu li {
+    margin: 0 15px;
+}
+
+nav.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Стиль для фона главной секции */
+.hero {
+    background-image: url('your-background-image.jpg'); /* Замените на путь к вашему изображению */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
     justify-content: center;
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    max-height: 80vh; /* Ограничение высоты */
-}
-
-#modalCaption {
-    color: #ccc;
+    align-items: center;
+    color: white;
     text-align: center;
 }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
+.hero h1 {
+    font-size: 3em;
+    margin: 0;
 }
 
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Стиль для скрытия шапки при прокрутке вниз */
-header.hidden {
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
+.hero p {
+    font-size: 1.5em;
 }
 
 /* Основной стиль */
 main {
-    padding-top: 100px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
+    padding-top: 60px; /* Отступ для корректного отображения контента под шапкой */
 }
 
-.section {
-    padding: 40px 0;
+section {
+    padding: 40px 20px;
     text-align: center;
 }
 
@@ -143,100 +97,25 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* Форма */
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-label {
-    margin-top: 10px;
-}
-
-input, textarea {
-    margin-bottom: 10px;
-    padding: 10px;
-    width: 100%;
-    max-width: 500px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #333;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-button:hover {
-    background-color: #555;
-}
-
-/* Стили для изображений команды */
-.team-member {
-    margin-top: 20px;
-}
-
-.team-photo {
-    border-radius: 50%; /* Круглая фотография */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    width: 150px; /* Установите исходный размер фото */
-    height: 150px; /* Установите исходный размер фото */
-}
-
-.team-photo:hover {
-    transform: scale(1.05);
-}
-
 /* Стили для мобильного меню */
 @media screen and (max-width: 768px) {
-    .menu {
+    nav.menu {
         display: none;
-        flex-direction: column;
-        width: 100%;
-        background-color: #333;
-        position: absolute;
-        top: 60px; /* Сместите вниз, чтобы не перекрывать логотип */
+        position: fixed;
+        top: 60px; /* Убедитесь, что меню не перекрывает шапку */
         left: 0;
-        z-index: 1000; /* Убедитесь, что меню поверх других элементов */
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        z-index: 1000;
     }
 
-    .menu.show {
+    nav.menu.show {
         display: flex;
     }
 
     .hamburger {
         display: flex;
     }
-}
-
-/* Стили для списка цен */
-.price-list {
-    list-style-type: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем отступы */
-    text-align: center; /* Центрируем текст */
-}
-
-.price-list li {
-    margin-bottom: 10px; /* Добавляем отступ между элементами списка */
-    font-size: 1.2em; /* Увеличиваем размер текста */
-}
-
-/* Стили для социальных иконок в подвале */
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
 }
