@@ -45,11 +45,25 @@ header {
     z-index: 1001; /* Убедитесь, что меню-бургер над меню */
 }
 
-.bar {
+/* По умолчанию три полоски видны */
+.hamburger .bar {
     background-color: white;
     height: 3px;
     width: 25px;
     margin: 3px 0;
+}
+
+/* Крестик, скрытый по умолчанию */
+.close-btn {
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1002;
+    display: none; /* Скрыть по умолчанию */
 }
 
 /* Стили для навигационного меню */
@@ -57,8 +71,8 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Занимает всю ширину экрана */
-    height: 100vh; /* Занимает всю высоту экрана */
+    width: 100vw;
+    height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
@@ -76,18 +90,6 @@ header {
     transform: translateX(0);
 }
 
-/* Стили для крестика */
-.close-btn {
-    font-size: 36px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 20px; /* Расположить в верхней части меню */
-    left: 20px; /* Расположить слева от меню, чтобы совпадало с бургером */
-    z-index: 1002; /* Убедитесь, что крестик над меню */
-}
-
 /* Стили для навигационных ссылок */
 .nav-menu a {
     color: white;
@@ -96,7 +98,7 @@ header {
     margin: 20px 0;
     text-transform: uppercase;
     transition: color 0.3s ease;
-    display: block; /* Убедитесь, что ссылки отображаются как блоки */
+    display: block;
 }
 
 .nav-menu a:hover {
