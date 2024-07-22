@@ -13,9 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         document.addEventListener('click', (event) => {
-            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+            if (!hamburger.contains(event.target) && !menu.contains(event.target) && !closeMenu.contains(event.target)) {
                 menu.classList.remove('show');
             }
         });
+    } else {
+        console.error('Элементы не найдены');
     }
 });
