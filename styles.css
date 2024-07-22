@@ -35,7 +35,7 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 60px; /* Adjusted to provide space for close button */
+    margin-right: 10px; /* Уменьшите значение для сдвига к правому краю */
 }
 
 .bar {
@@ -48,18 +48,16 @@ header {
 .nav-menu {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100vw;
+    right: 0;
+    width: 300px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-top: 60px;
-    padding-left: 40px;
-    box-sizing: border-box;
     z-index: 999;
 }
 
@@ -74,29 +72,13 @@ header {
     margin: 20px 0;
     text-transform: uppercase;
     transition: color 0.3s ease;
-    display: block;
 }
 
 .nav-menu a:hover {
     color: #ddd;
 }
 
-.close-btn {
-    font-size: 36px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 18px;
-    right: 68px; /* Adjusted to move the close button left */
-    z-index: 1002;
-    display: none;
-}
-
-main {
-    padding-top: 80px;
-}
-
+/* Стили для футера */
 footer {
     position: fixed;
     bottom: 0;
@@ -114,13 +96,34 @@ footer {
     font-size: 8px; /* Уменьшили размер шрифта футера */
 }
 
+/* Убираем черную полосу, если она есть */
+.header-placeholder {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+/* Стили для крестика */
+.close-btn {
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    position: absolute;
+    top: 10px; /* Установите значение для поднятия кнопки вверх */
+    right: 30px; /* Установите значение для размещения крестика на нужном месте */
+    z-index: 1002;
+    display: none;
+}
+
+/* Стили для мобильного меню */
 @media screen and (max-width: 768px) {
+    .hamburger {
+        margin-right: 10px; /* Уменьшите значение для сдвига к правому краю */
+    }
+
     .logo {
         font-size: 28px;
     }
-}
-
-/* Бургер-меню - скрытие нажатия при открытом меню */
-.hamburger.disabled {
-    pointer-events: none; /* Отключение кликабельности */
 }
