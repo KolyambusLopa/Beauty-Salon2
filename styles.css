@@ -23,6 +23,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: relative;
 }
 
 /* Логотип */
@@ -32,8 +33,6 @@ header {
     font-size: 36px;
     font-weight: bold;
     margin-left: 20px;
-    position: relative;
-    top: 10px;
 }
 
 /* Меню-бургер */
@@ -42,7 +41,7 @@ header {
     flex-direction: column;
     cursor: pointer;
     margin-right: 20px;
-    z-index: 1001; /* Убедитесь, что меню-бургер над меню */
+    z-index: 1001;
 }
 
 /* По умолчанию три полоски видны */
@@ -61,9 +60,9 @@ header {
     padding: 10px;
     position: absolute;
     top: 20px;
-    left: 20px;
+    right: 20px;
     z-index: 1002;
-    display: none; /* Скрыть по умолчанию */
+    display: none;
 }
 
 /* Стили для навигационного меню */
@@ -80,7 +79,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding-top: 60px;
-    padding-left: 40px; /* Отступ слева для ссылок */
+    padding-left: 40px;
     box-sizing: border-box;
     z-index: 999;
 }
