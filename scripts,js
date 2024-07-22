@@ -1,15 +1,15 @@
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.getElementById('hamburger');
-    const menu = document.getElementById('menu');
+    const navMenu = document.getElementById('nav-menu');
 
-    hamburger.addEventListener('click', () => {
-        menu.classList.toggle('show');
+    hamburger.addEventListener('click', function() {
+        navMenu.classList.toggle('show');
     });
 
     // Закрытие меню при клике вне его области (если нужно)
-    document.addEventListener('click', (event) => {
-        if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
-            menu.classList.remove('show');
+    document.addEventListener('click', function(event) {
+        if (!hamburger.contains(event.target) && !navMenu.contains(event.target)) {
+            navMenu.classList.remove('show');
         }
     });
 });
