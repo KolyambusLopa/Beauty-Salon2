@@ -36,9 +36,9 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 10px; /* Сдвигаем ближе к правому краю */
+    margin-right: 10px;
     position: relative;
-    z-index: 1001; /* Убедитесь, что гамбургер выше фона меню */
+    z-index: 1001;
 }
 
 .bar {
@@ -61,7 +61,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding-top: 60px;
-    padding-left: 20px; /* Добавляем отступ слева */
+    padding-left: 20px;
     z-index: 1000;
 }
 
@@ -97,15 +97,7 @@ footer {
 
 .footer-content p {
     margin: 0;
-    font-size: 8px; /* Уменьшили размер шрифта футера */
-}
-
-/* Убираем черную полосу, если она есть */
-.header-placeholder {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: none;
+    font-size: 8px;
 }
 
 /* Стили для крестика */
@@ -115,9 +107,9 @@ footer {
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    top: 10px; /* Устанавливаем верхнее положение */
-    right: 10px; /* Сдвигаем немного левее от правого края */
-    z-index: 1002; /* Убедитесь, что крестик выше меню */
+    top: 10px; /* Верхнее положение */
+    right: 10px; /* Правое положение */
+    z-index: 1002; /* Крестик должен быть выше меню */
     display: none; /* По умолчанию крестик скрыт */
 }
 
@@ -128,6 +120,6 @@ footer {
     }
 
     .hamburger {
-        margin-right: 10px; /* Уменьшите значение для сдвига к правому краю */
+        margin-right: 10px;
     }
 }
