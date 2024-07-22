@@ -88,57 +88,6 @@ nav {
     text-align: center;
 }
 
-/* Модальное окно */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background-color: rgba(0, 0, 0, 0.8);
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-content {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    max-height: 80vh; /* Ограничение высоты */
-}
-
-#modalCaption {
-    color: #ccc;
-    text-align: center;
-}
-
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: white;
-    font-size: 40px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
-.close:hover,
-.close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-/* Стиль для скрытия шапки при прокрутке вниз */
-header.hidden {
-    transform: translateY(-100%);
-    transition: transform 0.3s ease-in-out;
-}
-
 /* Основной стиль */
 main {
     padding-top: 100px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
@@ -186,23 +135,6 @@ button:hover {
     background-color: #555;
 }
 
-/* Стили для изображений команды */
-.team-member {
-    margin-top: 20px;
-}
-
-.team-photo {
-    border-radius: 50%; /* Круглая фотография */
-    cursor: pointer;
-    transition: transform 0.3s ease;
-    width: 150px; /* Установите исходный размер фото */
-    height: 150px; /* Установите исходный размер фото */
-}
-
-.team-photo:hover {
-    transform: scale(1.05);
-}
-
 /* Стили для мобильного меню */
 @media screen and (max-width: 768px) {
     .menu {
@@ -219,30 +151,4 @@ button:hover {
     .hamburger {
         display: flex;
     }
-}
-
-/* Стили для списка цен */
-.price-list {
-    list-style-type: none; /* Убираем маркеры списка */
-    padding: 0; /* Убираем отступы */
-    text-align: center; /* Центрируем текст */
-}
-
-.price-list li {
-    margin-bottom: 10px; /* Добавляем отступ между элементами списка */
-    font-size: 1.2em; /* Увеличиваем размер текста */
-}
-
-/* Стили для социальных иконок в подвале */
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    margin: 0 10px;
-}
-
-.social-icons img {
-    width: 24px;
-    height: 24px;
 }
