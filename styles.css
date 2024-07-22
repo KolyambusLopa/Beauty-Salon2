@@ -50,14 +50,14 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw; /* Полная ширина экрана */
+    width: 300px; /* Ширина меню */
     height: 100vh; /* Полная высота экрана */
     background-color: rgba(0, 0, 0, 0.9); /* Черный фон с прозрачностью */
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start; /* Выравнивание элементов по левому краю */
     padding-top: 60px;
     z-index: 999;
 }
@@ -77,6 +77,15 @@ header {
 
 .nav-menu a:hover {
     color: #ddd;
+}
+
+/* Стили для крестика */
+.close-btn {
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    align-self: flex-end; /* Размещаем крестик в верхнем правом углу меню */
 }
 
 /* Основной стиль */
