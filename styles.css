@@ -1,10 +1,19 @@
-body {
-    font-family: 'Montserrat', sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 header {
@@ -45,29 +54,26 @@ header {
     margin: 3px 0;
 }
 
-/* Основной стиль для меню */
 .nav-menu {
     position: fixed;
     top: 0;
-    left: 0; /* Для того чтобы меню было слева */
-    width: 100%; /* Занимает всю ширину экрана */
-    height: 100%; /* Занимает всю высоту экрана */
-    background-color: rgba(0, 0, 0, 0.9); /* Черный фон с прозрачностью */
-    transform: translateX(-100%); /* Изначально скрыто за экраном слева */
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 60px; /* Отступ сверху для меню */
+    padding-top: 60px;
     z-index: 999;
 }
 
-/* Показать меню */
 .nav-menu.show {
-    transform: translateX(0); /* Показывает меню */
+    transform: translateX(0);
 }
 
-/* Стили для ссылок в меню */
 .nav-menu a {
     color: white;
     text-decoration: none;
@@ -81,14 +87,14 @@ header {
     color: #ddd;
 }
 
+/* Основной стиль */
 main {
     padding-top: 80px;
+    flex-grow: 1;
 }
 
+/* Стили для футера */
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
     text-align: right;
     padding: 5px 10px;
     background-color: transparent;
@@ -102,12 +108,16 @@ footer {
     font-size: 8px; /* Уменьшили размер шрифта футера */
 }
 
+/* Убираем черную полосу, если она есть */
+.header-placeholder {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
-    }
-
-    .hamburger {
-        margin-right: 10px;
     }
 }
