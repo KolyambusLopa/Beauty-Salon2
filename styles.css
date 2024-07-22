@@ -51,10 +51,10 @@ header {
 .nav-menu {
     position: fixed;
     top: 0;
-    left: 0; /* Изменено на left */
-    width: 300px;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
+    left: 0; /* Меню теперь открывается слева */
+    width: 100vw; /* Ширина на всю ширину экрана */
+    height: 100vh; /* Высота на всю высоту экрана */
+    background-color: rgba(0, 0, 0, 0.9); /* Черный фон с небольшой прозрачностью */
     transform: translateX(-100%); /* Меню скрыто слева */
     transition: transform 0.3s ease-in-out;
     display: flex;
@@ -108,7 +108,7 @@ footer {
     padding: 10px;
     position: absolute;
     top: 10px;
-    left: 10px; /* Изменено на left */
+    left: 10px;
     z-index: 1002;
     display: none;
 }
