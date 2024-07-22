@@ -13,7 +13,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для шапки */
+    background-color: transparent; /* Удаляем фон шапки */
     z-index: 1002; /* Шапка должна быть выше меню */
     transition: background-color 0.3s ease; /* Плавный переход фона */
     box-shadow: none; /* Удаление тени шапки */
@@ -88,7 +88,7 @@ header {
 }
 
 main {
-    padding-top: 80px;
+    padding-top: 80px; /* Убедитесь, что основной контент не перекрывается шапкой */
     position: relative;
     z-index: 0;
     height: 100%;
