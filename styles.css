@@ -3,9 +3,14 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку */
+}
+
+.content-wrapper {
+    min-height: 100vh;
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    background-attachment: fixed; /* Закрепляем фон, чтобы он не прокручивался */
+    overflow: auto;
 }
 
 header {
