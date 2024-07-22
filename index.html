@@ -5,142 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raspberry Salon</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Шапка сайта -->
     <header>
-    <div class="container">
-        <div class="logo-container">
-            <a href="#home" class="logo">Raspberry Salon</a>
+        <a href="#home" class="logo">Raspberry Salon</a>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
         </div>
-        <nav>
-            <ul id="menu" class="menu">
-                <li><a href="#home">Главная</a></li>
-                <li><a href="#services">Услуги</a></li>
-                <li><a href="#team">Наша команда</a></li>
+        <nav class="menu">
+            <ul>
+                <li><a href="#about">О нас</a></li>
                 <li><a href="#prices">Цены</a></li>
+                <li><a href="#gallery">Галерея</a></li>
                 <li><a href="#contact">Контакты</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
         </nav>
-    </div>
-</header>
+    </header>
 
-
+    <!-- Главный контент сайта -->
     <main>
-        <section id="home" class="section home-section">
-            <div class="overlay">
-                <div class="container">
-                    <h2>Добро пожаловать в Raspberry Salon</h2>
-                    <p>Ваше идеальное место для красоты и расслабления.</p>
-                </div>
-            </div>
+        <section id="home" class="hero">
+            <h1>Добро пожаловать в Raspberry Salon</h1>
+            <p>Ваше идеальное место для красоты и расслабления</p>
         </section>
-
-        <section id="about" class="section">
-            <div class="container">
-                <h2>О нас</h2>
-                <p>Мы предоставляем лучшие услуги по уходу за вашей внешностью.</p>
-            </div>
+        <section id="about">
+            <h2>О нас</h2>
+            <p>Информация о салоне</p>
         </section>
-
-        <section id="services" class="section">
-            <div class="container">
-                <h2>Услуги</h2>
-                <div class="services-grid">
-                    <div class="service-item">
-                        <img src="haircut.jpg" alt="Стрижка">
-                        <h3>Стрижка</h3>
-                        <p>Профессиональная стрижка от наших мастеров.</p>
-                    </div>
-                    <div class="service-item">
-                        <img src="coloring.jpg" alt="Окрашивание">
-                        <h3>Окрашивание</h3>
-                        <p>Индивидуальный подход к каждому клиенту.</p>
-                    </div>
-                    <div class="service-item">
-                        <img src="manicure.jpg" alt="Маникюр">
-                        <h3>Маникюр</h3>
-                        <p>Красивые и ухоженные ногти каждый день.</p>
-                    </div>
-                    <div class="service-item">
-                        <img src="pedicure.jpg" alt="Педикюр">
-                        <h3>Педикюр</h3>
-                        <p>Комплексный уход за вашими ногами.</p>
-                    </div>
-                </div>
-            </div>
+        <section id="prices">
+            <h2>Цены</h2>
+            <p>Список цен</p>
         </section>
-
-        <section id="prices" class="section">
-            <div class="container">
-                <h2>Цены</h2>
-                <ul class="price-list">
-                    <li>Реснички - 20 Euro</li>
-                    <li>Бровки - 25 Euro</li>
-                    <li>Лами реснички - 35 Euro</li>
-                    <li>Макияж - 30 Euro</li>
-                </ul>
-            </div>
+        <section id="gallery">
+            <h2>Галерея</h2>
+            <p>Фото работ</p>
         </section>
-
-        <section id="team" class="section">
-            <div class="container">
-                <h2>Наша команда</h2>
-                <div class="team-member">
-                    <img src="katerina.jpg" alt="Катерина Малинина" class="team-photo">
-                    <h3>Катерина Малинина</h3>
-                    <p>Мастер с 4-х летним стажем в работе с бровками и ресничками. Катерина также специализируется на создании идеального макияжа для любых мероприятий.</p>
-                </div>
-            </div>
-
-            <!-- Модальное окно для изображения -->
-            <div id="imageModal" class="modal">
-                <span class="close" id="closeModal">&times;</span>
-                <img class="modal-content" id="modalImage">
-                <div id="modalCaption"></div>
-            </div>
-        </section>
-
-        <section id="booking" class="section">
-            <div class="container">
-                <h2>Запись на прием</h2>
-                <form action="https://formspree.io/f/xdknakyg" method="POST">
-                    <label for="name">Имя:</label>
-                    <input type="text" id="name" name="name" required>
-
-                    <label for="email">Электронная почта:</label>
-                    <input type="email" id="email" name="email" required>
-
-                    <label for="phone">Телефон:</label>
-                    <input type="tel" id="phone" name="phone" pattern="\+?\d{8,11}" maxlength="12" required title="Введите телефонный номер в формате: +12345678 или 12345678">
-
-                    <label for="date">Дата приема:</label>
-                    <input type="date" id="date" name="date" required>
-
-                    <label for="message">Комментарий:</label>
-                    <textarea id="message" name="message"></textarea>
-
-                    <button type="submit">Отправить заявку</button>
-                </form>
-            </div>
+        <section id="contact">
+            <h2>Контакты</h2>
+            <p>Контактная информация</p>
         </section>
     </main>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Raspberry Salon. Все права защищены.</p>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
-                <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
-            </div>
-        </div>
-    </footer>
 
     <script src="scripts.js"></script>
 </body>
