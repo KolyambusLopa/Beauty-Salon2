@@ -128,101 +128,54 @@
                 </form>
             </div>
         </section>
-
-        <section id="contact" class="section">
-            <div class="container">
-                <h2>Контакты</h2>
-                <p><strong>Телефон:</strong> 25130922</p>
-                <p><strong>Адрес:</strong> Druvienas 34, Riga</p>
-            </div>
-        </section>
     </main>
 
     <footer>
         <div class="container">
+            <p>&copy; 2024 Raspberry Salon. Все права защищены.</p>
             <div class="social-icons">
-                <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-                <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+                <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+                <a href="https://twitter.com" target="_blank"><img src="twitter-icon.png" alt="Twitter"></a>
             </div>
-            <p>© 2024 Raspberry Salon. Все права защищены.</p>
         </div>
     </footer>
 
     <script>
-        document.querySelector('form').addEventListener('submit', function(event) {
-            const phoneInput = document.getElementById('phone');
-            const phoneValue = phoneInput.value;
+        document.addEventListener('DOMContentLoaded', function() {
+            const menu = document.getElementById('menu');
+            const hamburger = document.getElementById('hamburger');
+            const modal = document.getElementById("imageModal");
+            const img = document.querySelector(".team-photo");
+            const modalImg = document.getElementById("modalImage");
+            const captionText = document.getElementById("modalCaption");
+            const span = document.getElementById("closeModal");
 
-            // Удаляем все символы, кроме цифр и плюс
-            const sanitizedPhone = phoneValue.replace(/[^\d+]/g, '');
+            hamburger.addEventListener('click', function() {
+                menu.classList.toggle('show');
+            });
 
-            // Проверяем, начинается ли номер с +
-            let phoneNumber = sanitizedPhone;
-            if (phoneNumber.startsWith('+')) {
-                phoneNumber = phoneNumber.substring(1);
-            }
+            document.addEventListener('click', (event) => {
+                if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                    menu.classList.remove('show');
+                }
+            });
 
-            // Проверяем длину номера без +
-            if (phoneNumber.length < 8 || phoneNumber.length > 11) {
-                alert('Номер телефона должен содержать от 8 до 11 цифр (без учета "+").');
-                event.preventDefault();
-            }
-        });
+            img.addEventListener('click', function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
+            });
 
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
+            span.addEventListener('click', function() { 
+                modal.style.display = "none";
+            });
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (currentScroll > lastScrollTop) {
-                // Прокрутка вниз
-                header.classList.add('hidden');
-            } else {
-                // Прокрутка вверх
-                header.classList.remove('hidden');
-            }
-            lastScrollTop = currentScroll <= 0 ? 0 : currentScroll;
-        });
-
-        // Получаем модальное окно
-        var modal = document.getElementById("imageModal");
-        var img = document.querySelector(".team-photo");
-        var modalImg = document.getElementById("modalImage");
-        var captionText = document.getElementById("modalCaption");
-
-        img.onclick = function() {
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = this.alt;
-        }
-
-        var span = document.getElementById("closeModal");
-
-        span.onclick = function() { 
-            modal.style.display = "none";
-        }
-
-        // Закрытие модального окна при клике на пустую область
-        modal.addEventListener('click', (event) => {
-            if (event.target === modal) {
-                modal.style.display = 'none';
-            }
-        });
-
-        const hamburger = document.getElementById('hamburger');
-        const menu = document.getElementById('menu');
-
-        hamburger.addEventListener('click', (event) => {
-            event.stopPropagation(); // Останавливаем всплытие события
-            menu.classList.toggle('show');
-        });
-
-        document.addEventListener('click', (event) => {
-            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
-                menu.classList.remove('show');
-            }
+            modal.addEventListener('click', function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
         });
     </script>
 </body>
