@@ -202,3 +202,14 @@ button:hover {
         display: flex;
     }
 }
+.price-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    text-align: center; /* Центрируем текст */
+}
+
+.price-list li {
+    margin-bottom: 10px; /* Добавляем отступ между элементами списка */
+    font-size: 1.2em; /* Увеличиваем размер текста */
+}
+
