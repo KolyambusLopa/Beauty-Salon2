@@ -1,3 +1,4 @@
+/* Общие стили */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -7,6 +8,7 @@ body {
     background-size: cover;
 }
 
+/* Стили для шапки */
 header {
     position: fixed;
     top: 0;
@@ -45,14 +47,15 @@ header {
     margin: 3px 0;
 }
 
+/* Стили для навигационного меню */
 .nav-menu {
     position: fixed;
     top: 0;
-    right: 0;
+    left: 0; /* Перемещаем меню влево */
     width: 300px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
-    transform: translateX(100%);
+    transform: translateX(-100%); /* Начальное состояние: скрыто слева */
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -62,7 +65,7 @@ header {
 }
 
 .nav-menu.show {
-    transform: translateX(0);
+    transform: translateX(0); /* Показать меню */
 }
 
 .nav-menu a {
