@@ -5,12 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (hamburger && menu) {
         hamburger.addEventListener('click', () => {
             menu.classList.toggle('show');
+            hamburger.classList.toggle('active'); // Меняет иконку гамбургера на крестик и наоборот
         });
 
         // Закрытие меню при клике вне его области
         document.addEventListener('click', (event) => {
             if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
                 menu.classList.remove('show');
+                hamburger.classList.remove('active'); // Возвращает иконку гамбургера
             }
         });
     } else {
