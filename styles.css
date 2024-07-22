@@ -83,16 +83,16 @@ footer {
     bottom: 0;
     width: 100%;
     text-align: right;
-    padding: 10px 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Чтобы футер был виден на фоне */
+    padding: 5px 10px;
+    background-color: transparent; /* Сделаем фон футера прозрачным */
     color: white;
-    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: none; /* Убираем тень */
     box-sizing: border-box; /* Убедитесь, что padding не увеличивает ширину футера */
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 12px; /* Размер шрифта для футера */
+    font-size: 8px; /* Сделаем текст футера очень маленьким */
 }
 
 /* Убираем черную полосу, если она есть */
