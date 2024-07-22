@@ -87,8 +87,8 @@ header {
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    top: 20px;
-    right: 60px; /* Adjusted to move the close button left */
+    top: 15px;
+    right: 65px; /* Adjusted to move the close button left */
     z-index: 1002;
     display: none;
 }
