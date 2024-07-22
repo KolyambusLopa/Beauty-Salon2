@@ -9,9 +9,10 @@ body {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
     position: fixed;
+    top: 0;
     width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
     z-index: 1002; /* Убедитесь, что шапка выше меню */
 }
 
@@ -58,7 +59,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
-    z-index: 1001;
+    z-index: 1001; /* Меню должно быть ниже шапки */
 }
 
 .nav-menu.show {
@@ -107,4 +108,9 @@ footer {
     .logo {
         font-size: 28px;
     }
+}
+
+/* Меню открыто, измените фон шапки, если нужно */
+.nav-menu.show + header {
+    background-color: rgba(0, 0, 0, 0.7); /* Более темный фон для улучшения видимости */
 }
