@@ -192,13 +192,13 @@
         var modalImg = document.getElementById("modalImage");
         var captionText = document.getElementById("modalCaption");
 
-        img.onclick = function(){
+        img.onclick = function() {
             modal.style.display = "block";
             modalImg.src = this.src;
             captionText.innerHTML = this.alt;
         }
 
-        var span = document.getElementsByClassName("close")[0];
+        var span = document.getElementById("closeModal");
 
         span.onclick = function() { 
             modal.style.display = "none";
@@ -219,7 +219,6 @@
             menu.classList.toggle('show');
         });
 
-        // Закрываем меню при клике вне его области
         document.addEventListener('click', (event) => {
             if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
                 menu.classList.remove('show');
