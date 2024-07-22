@@ -37,6 +37,7 @@ header {
     flex-direction: column;
     cursor: pointer;
     margin-right: 20px;
+    z-index: 1001;
 }
 
 .bar {
