@@ -109,7 +109,7 @@ footer {
 
 .footer-content p {
     margin: 0;
-    font-size: 8px;
+    font-size: 12px; /* Убедитесь, что размер шрифта футера одинаковый */
 }
 
 @media screen and (max-width: 768px) {
