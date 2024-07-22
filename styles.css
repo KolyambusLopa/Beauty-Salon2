@@ -62,10 +62,21 @@ header {
     z-index: 999;
 }
 
+/* Появление меню */
 .nav-menu.show {
     transform: translateX(0);
 }
 
+/* Стили для крестика */
+.close-btn {
+    font-size: 36px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    align-self: flex-end; /* Размещаем крестик в верхнем правом углу меню */
+}
+
+/* Стили для навигационных ссылок */
 .nav-menu a {
     color: white;
     text-decoration: none;
@@ -77,15 +88,6 @@ header {
 
 .nav-menu a:hover {
     color: #ddd;
-}
-
-/* Стили для крестика */
-.close-btn {
-    font-size: 36px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    align-self: flex-end; /* Размещаем крестик в верхнем правом углу меню */
 }
 
 /* Основной стиль */
