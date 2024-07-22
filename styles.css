@@ -1,18 +1,59 @@
-/* Общие стили для фонового изображения на главной странице */
-body.home-bg {
+/* Общие стили */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* Стили для черного фона меню */
+/* Стили для заголовка и меню */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Добавим немного фона */
+}
+
+.logo {
+    color: white;
+    text-decoration: none;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+.bar {
+    background-color: white;
+    height: 3px;
+    width: 25px;
+    margin: 3px 0;
+}
+
+/* Стили для меню */
 .nav-menu {
     position: fixed;
     top: 0;
-    left: 0; /* Перемещаем меню влево */
-    width: 100vw; /* Устанавливаем ширину на 100% от видимой области окна */
-    height: 100vh; /* Устанавливаем высоту на 100% от видимой области окна */
-    background-color: rgba(0, 0, 0, 0.9); /* Черный фон с небольшой прозрачностью */
-    transform: translateX(-100%); /* Начальное положение меню вне экрана */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -22,19 +63,18 @@ body.home-bg {
 }
 
 .nav-menu.show {
-    transform: translateX(0); /* Меню появится на экране */
+    transform: translateX(0);
 }
 
-/* Стили для крестика */
 .close-btn {
     position: absolute;
     top: 20px;
-    right: 20px;
+    left: 20px;
     width: 30px;
     height: 30px;
     background: white;
-    clip-path: cross; /* Используем clip-path для создания крестика */
     cursor: pointer;
+    clip-path: cross; /* Крестик с помощью clip-path */
 }
 
 /* Стили для ссылок в меню */
@@ -51,6 +91,11 @@ body.home-bg {
     color: #ddd;
 }
 
+/* Основной стиль */
+main {
+    padding-top: 80px; /* Отступ для основного контента */
+}
+
 /* Стили для футера */
 footer {
     position: fixed;
@@ -60,7 +105,6 @@ footer {
     padding: 5px 10px;
     background-color: transparent;
     color: white;
-    box-shadow: none;
     box-sizing: border-box;
 }
 
