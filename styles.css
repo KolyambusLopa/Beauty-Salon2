@@ -98,7 +98,7 @@ footer {
 
 .footer-content p {
     margin: 0;
-    font-size: 8px;
+    font-size: 8px; /* Уменьшили размер шрифта футера */
 }
 
 /* Убираем черную полосу, если она есть */
