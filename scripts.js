@@ -1,4 +1,3 @@
-console.log('JavaScript загружен');
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
@@ -8,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.log('JavaScript загружен и элементы найдены');
 
         hamburger.addEventListener('click', () => {
-            menu.classList.toggle('show');
+            menu.classList.add('show');
             console.log('Hamburger clicked');
         });
 
@@ -19,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Закрытие меню при клике вне его области
         document.addEventListener('click', (event) => {
-            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+            if (!hamburger.contains(event.target) && !menu.contains(event.target) && menu.classList.contains('show')) {
                 menu.classList.remove('show');
                 console.log('Clicked outside menu');
             }
