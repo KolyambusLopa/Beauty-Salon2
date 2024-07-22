@@ -70,6 +70,12 @@ header {
     text-decoration: none;
     font-size: 24px;
     margin: 20px 0;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+}
+
+.nav-menu a:hover {
+    color: #ddd;
 }
 
 /* Основной стиль */
@@ -84,15 +90,15 @@ footer {
     width: 100%;
     text-align: right;
     padding: 5px 10px;
-    background-color: transparent; /* Сделаем фон футера прозрачным */
+    background-color: transparent;
     color: white;
-    box-shadow: none; /* Убираем тень */
-    box-sizing: border-box; /* Убедитесь, что padding не увеличивает ширину футера */
+    box-shadow: none;
+    box-sizing: border-box;
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 8px; /* Сделаем текст футера очень маленьким */
+    font-size: 8px;
 }
 
 /* Убираем черную полосу, если она есть */
