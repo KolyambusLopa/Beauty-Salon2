@@ -1,4 +1,4 @@
-/* Общие стили */
+/* Основные стили */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -6,16 +6,14 @@ body {
     box-sizing: border-box;
 }
 
-/* Контейнер */
 .container {
     width: 80%;
     margin: 0 auto;
     text-align: center; /* Центрирование содержимого контейнера */
 }
 
-/* Шапка */
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для шапки */
+    background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон шапки */
     color: white; /* Цвет текста */
     padding: 20px 0; /* Отступы шапки */
     position: fixed; /* Фиксированное положение */
@@ -23,13 +21,13 @@ header {
     top: 0;
     z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
     display: flex;
-    justify-content: space-between; /* Расположение элементов шапки по краям */
+    justify-content: space-between;
     align-items: center; /* Центрирование элементов по вертикали */
+    padding: 0 20px; /* Отступы от краев */
 }
 
-/* Логотип */
 .logo-container {
-    margin-left: 20px; /* Отступ от левого края */
+    text-align: left; /* Выравнивание текста логотипа по левому краю */
 }
 
 .logo {
@@ -52,7 +50,6 @@ nav {
     justify-content: center; /* Центрирование меню */
 }
 
-/* Элементы меню */
 .menu li {
     margin: 0 15px;
 }
@@ -68,7 +65,6 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px; /* Отступ от правого края */
 }
 
 .bar {
@@ -80,7 +76,7 @@ nav {
 
 /* Стили для секции с фоновым изображением */
 .hero {
-    background-image: url('images/your-background-image.jpg'); /* Укажите путь к вашему изображению */
+    background-image: url('images/background.jpg'); /* Укажите путь к вашему изображению */
     background-size: cover; /* Растягиваем изображение по всей секции */
     background-position: center; /* Центрируем изображение */
     height: 100vh; /* Высота секции на весь экран */
@@ -90,15 +86,6 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
-}
-
-.hero h1 {
-    font-size: 48px;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 24px;
 }
 
 /* Модальное окно */
