@@ -3,39 +3,39 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url('images/background.jpg') no-repeat center center fixed; /* Путь к вашему фоновому изображению */
-    background-size: cover; /* Чтобы изображение покрывало весь экран */
+    background: url('images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1000; /* Шапка должна быть поверх всего остального контента */
+    z-index: 1000;
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* Расположить элементы по краям */
-    align-items: center; /* Центрировать элементы по вертикали */
-    padding: 20px; /* Отступы для шапки */
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
 }
 
 .logo {
     color: white;
     text-decoration: none;
-    font-size: 36px; /* Размер шрифта для логотипа */
+    font-size: 36px;
     font-weight: bold;
-    margin-left: 20px; /* Отступ слева от края */
+    margin-left: 20px;
     position: relative;
-    top: 10px; /* Смещение вниз */
+    top: 10px;
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px; /* Отступ справа от края */
+    margin-right: 20px;
 }
 
 .bar {
@@ -49,32 +49,49 @@ header {
     position: fixed;
     top: 0;
     right: 0;
-    width: 300px; /* Ширина меню */
-    height: 100vh; /* Высота меню */
-    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон */
-    transform: translateX(100%); /* Меню изначально скрыто */
-    transition: transform 0.3s ease-in-out; /* Плавное появление меню */
+    width: 300px;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 60px; /* Отступ сверху */
-    z-index: 999; /* Меню должно быть поверх других элементов */
+    padding-top: 60px;
+    z-index: 999;
 }
 
 .nav-menu.show {
-    transform: translateX(0); /* Показываем меню при добавлении класса show */
+    transform: translateX(0);
 }
 
 .nav-menu a {
     color: white;
     text-decoration: none;
     font-size: 24px;
-    margin: 20px 0; /* Отступы между пунктами меню */
+    margin: 20px 0;
 }
 
 /* Основной стиль */
 main {
-    padding-top: 80px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
+    padding-top: 80px;
+}
+
+/* Стили для футера */
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: right;
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Чтобы футер был виден на фоне */
+    color: white;
+    box-shadow: 0 -1px 5px rgba(0, 0, 0, 0.5);
+}
+
+.footer-content p {
+    margin: 0;
+    font-size: 14px; /* Размер шрифта для футера */
 }
 
 /* Убираем черную полосу, если она есть */
@@ -87,6 +104,6 @@ main {
 
 @media screen and (max-width: 768px) {
     .logo {
-        font-size: 28px; /* Уменьшение размера шрифта на мобильных устройствах */
+        font-size: 28px;
     }
 }
