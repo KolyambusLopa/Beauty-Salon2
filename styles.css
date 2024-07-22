@@ -8,6 +8,7 @@ body {
 .container {
     width: 80%;
     margin: 0 auto;
+    text-align: center; /* Центрирование содержимого контейнера */
 }
 
 header {
@@ -18,25 +19,27 @@ header {
     width: 100%; /* Ширина на всю ширину */
     top: 0;
     z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
-    display: flex; /* Используем flexbox */
-    justify-content: space-between; /* Распределяем элементы по горизонтали */
-    align-items: center; /* Выравниваем элементы по вертикали */
-    text-align: center; /* Центрирование текста в шапке */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование элементов по вертикали */
 }
 
-/* Логотип */
+.logo-container {
+    text-align: center; /* Центрирование текста логотипа */
+    margin-bottom: 10px; /* Отступ между логотипом и меню */
+}
+
 .logo {
     color: white;
     text-decoration: none;
     font-size: 24px;
-    margin: 0 auto; /* Центрирование логотипа */
 }
 
 /* Навигация */
 nav {
     display: flex;
-    flex-grow: 1;
-    justify-content: center; /* Центрирование меню */
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu {
@@ -44,6 +47,7 @@ nav {
     list-style: none;
     padding: 0;
     margin: 0;
+    justify-content: center; /* Центрирование меню */
 }
 
 /* Элементы меню */
@@ -124,7 +128,7 @@ header.hidden {
 
 /* Основной стиль */
 main {
-    padding-top: 80px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
+    padding-top: 100px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
 }
 
 .section {
