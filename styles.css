@@ -45,6 +45,7 @@ header {
     flex-direction: column;
     cursor: pointer;
     margin-right: 20px;
+    z-index: 1001; /* Добавляем высокий z-index, чтобы иконка была видна поверх меню */
 }
 
 .bar {
@@ -87,13 +88,11 @@ header {
     color: #ddd;
 }
 
-/* Основной стиль */
 main {
     padding-top: 80px;
     flex-grow: 1;
 }
 
-/* Стили для футера */
 footer {
     text-align: right;
     padding: 5px 10px;
@@ -105,10 +104,9 @@ footer {
 
 .footer-content p {
     margin: 0;
-    font-size: 8px; /* Уменьшили размер шрифта футера */
+    font-size: 8px;
 }
 
-/* Убираем черную полосу, если она есть */
 .header-placeholder {
     height: 0;
     margin: 0;
