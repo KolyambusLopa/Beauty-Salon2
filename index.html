@@ -204,4 +204,27 @@
             modal.style.display = "none";
         }
 
-        // З
+        // Закрытие модального окна при клике на пустую область
+        modal.addEventListener('click', (event) => {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+        const hamburger = document.getElementById('hamburger');
+        const menu = document.getElementById('menu');
+
+        hamburger.addEventListener('click', (event) => {
+            event.stopPropagation(); // Останавливаем всплытие события
+            menu.classList.toggle('show');
+        });
+
+        // Закрываем меню при клике вне его области
+        document.addEventListener('click', (event) => {
+            if (!menu.contains(event.target) && !hamburger.contains(event.target)) {
+                menu.classList.remove('show');
+            }
+        });
+    </script>
+</body>
+</html>
