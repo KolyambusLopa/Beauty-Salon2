@@ -1,19 +1,10 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 body {
     font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-}
-
-.content-wrapper {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
 }
 
 header {
@@ -45,7 +36,6 @@ header {
     flex-direction: column;
     cursor: pointer;
     margin-right: 20px;
-    z-index: 1001; /* Добавляем высокий z-index, чтобы иконка была видна поверх меню */
 }
 
 .bar {
@@ -60,7 +50,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
@@ -88,30 +78,30 @@ header {
     color: #ddd;
 }
 
+/* Основной стиль */
 main {
     padding-top: 80px;
-    flex-grow: 1;
+    position: relative;
+    z-index: 0;
 }
 
+/* Стили для футера */
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: right;
     padding: 5px 10px;
     background-color: transparent;
     color: white;
     box-shadow: none;
     box-sizing: border-box;
+    z-index: 1000;
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 8px;
-}
-
-.header-placeholder {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: none;
+    font-size: 8px; /* Уменьшили размер шрифта футера */
 }
 
 @media screen and (max-width: 768px) {
