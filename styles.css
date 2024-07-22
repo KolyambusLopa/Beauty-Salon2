@@ -82,9 +82,10 @@ header {
     color: white;
     cursor: pointer;
     padding: 10px;
-    align-self: flex-start; /* Выровнять по левому краю меню */
-    margin-left: 20px; /* Отступ слева */
-    margin-top: 20px; /* Отступ сверху */
+    position: absolute;
+    top: 20px; /* Расположить в верхней части меню */
+    right: 20px; /* Расположить справа от меню */
+    z-index: 1002; /* Убедитесь, что крестик над меню */
 }
 
 /* Стили для навигационных ссылок */
