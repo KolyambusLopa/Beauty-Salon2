@@ -3,24 +3,28 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url('path/to/your-background-image.jpg') no-repeat center center fixed; /* Замените на путь к вашей фоновому изображению */
+    background: url('path/to/your-background-image.jpg') no-repeat center center fixed; /* Замените на путь к вашему фоновому изображению */
     background-size: cover; /* Чтобы изображение покрывало весь экран */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Шапка должна быть поверх всего остального контента */
 }
 
 .header-container {
     display: flex;
-    justify-content: space-between; /* Располагает элементы по краям */
-    align-items: center; /* Центрирует элементы по вертикали */
-    position: absolute; /* Позиционирование поверх фонового изображения */
-    top: 20px; /* Расположение от верхнего края */
-    width: 100%; /* Ширина на всю ширину экрана */
-    padding: 0 20px; /* Отступы от краев */
+    justify-content: space-between; /* Расположить элементы по краям */
+    align-items: center; /* Центрировать элементы по вертикали */
+    padding: 20px; /* Отступы для шапки */
 }
 
 .logo {
     color: white;
     text-decoration: none;
-    font-size: 36px; /* Размер шрифта логотипа */
+    font-size: 36px; /* Размер шрифта для логотипа */
     font-weight: bold;
 }
 
@@ -28,7 +32,6 @@ body {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px; /* Отступ от правого края */
 }
 
 .bar {
@@ -38,15 +41,14 @@ body {
     margin: 3px 0;
 }
 
-/* Навигация */
 .nav-menu {
     position: fixed;
     top: 0;
     right: 0;
     width: 300px; /* Ширина меню */
-    height: 100vh; /* Высота на весь экран */
-    background-color: rgba(0, 0, 0, 0.9); /* Черный полупрозрачный фон */
-    transform: translateX(100%); /* Меню скрыто за пределами экрана */
+    height: 100vh; /* Высота меню */
+    background-color: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон */
+    transform: translateX(100%); /* Меню изначально скрыто */
     transition: transform 0.3s ease-in-out; /* Плавное появление меню */
     display: flex;
     flex-direction: column;
