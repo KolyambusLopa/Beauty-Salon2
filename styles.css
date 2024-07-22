@@ -19,6 +19,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    position: relative;
 }
 
 .logo {
@@ -35,7 +36,9 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 10px; /* Уменьшите значение для сдвига к правому краю */
+    margin-right: 10px; /* Сдвигаем ближе к правому краю */
+    position: relative;
+    z-index: 1001; /* Убедитесь, что гамбургер выше фона меню */
 }
 
 .bar {
@@ -56,9 +59,10 @@ header {
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     padding-top: 60px;
-    z-index: 999;
+    padding-left: 20px; /* Добавляем отступ слева */
+    z-index: 1000;
 }
 
 .nav-menu.show {
@@ -111,19 +115,19 @@ footer {
     cursor: pointer;
     padding: 10px;
     position: absolute;
-    top: 10px; /* Установите значение для поднятия кнопки вверх */
-    right: 30px; /* Установите значение для размещения крестика на нужном месте */
-    z-index: 1002;
-    display: none;
+    top: 10px; /* Устанавливаем верхнее положение */
+    right: 10px; /* Сдвигаем немного левее от правого края */
+    z-index: 1002; /* Убедитесь, что крестик выше меню */
+    display: none; /* По умолчанию крестик скрыт */
 }
 
 /* Стили для мобильного меню */
 @media screen and (max-width: 768px) {
-    .hamburger {
-        margin-right: 10px; /* Уменьшите значение для сдвига к правому краю */
-    }
-
     .logo {
         font-size: 28px;
+    }
+
+    .hamburger {
+        margin-right: 10px; /* Уменьшите значение для сдвига к правому краю */
     }
 }
