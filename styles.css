@@ -1,77 +1,67 @@
-/* Добавляем CSS стили для внешнего вида иконок социальных сетей */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
-
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background: #f3f3f3;
+    box-sizing: border-box;
 }
 
 .container {
     width: 80%;
-    margin: auto;
-    overflow: hidden;
+    margin: 0 auto;
+    text-align: center; /* Центрирование содержимого контейнера */
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding-top: 10px;
-    min-height: 70px;
-    border-bottom: #77aaff 3px solid;
-    position: fixed;
-    width: 100%;
-    z-index: 1000;
-    transition: top 0.3s;
-}
-
-header.hidden {
-    top: -70px;
-}
-
-header a {
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-.logo {
-    float: left;
+    background-color: #333; /* Фон шапки */
+    color: white; /* Цвет текста */
+    padding: 20px 0; /* Отступы шапки */
+    position: fixed; /* Фиксированное положение */
+    width: 100%; /* Ширина на всю ширину */
+    top: 0;
+    z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирование элементов по вертикали */
 }
 
 .logo-container {
-    display: inline-block;
+    text-align: center; /* Центрирование текста логотипа */
+    margin-bottom: 10px; /* Отступ между логотипом и меню */
 }
 
-nav {
-    float: right;
-    margin-top: 10px;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-nav ul li {
-    display: inline;
-    margin-left: 5px;
-}
-
-nav ul li a {
-    color: #fff;
+.logo {
+    color: white;
     text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
+    font-size: 24px;
 }
 
-nav ul li a:hover {
-    color: #77aaff;
+/* Навигация */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
+.menu {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    justify-content: center; /* Центрирование меню */
+}
+
+/* Элементы меню */
+.menu li {
+    margin: 0 15px;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Кнопка гамбургера */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -79,163 +69,15 @@ nav ul li a:hover {
 }
 
 .bar {
+    background-color: white;
     height: 3px;
     width: 25px;
-    background-color: white;
-    margin: 4px 0;
-    transition: 0.4s;
+    margin: 3px 0;
 }
 
-section {
-    padding: 80px 0;
-    text-align: center;
-}
-
-.section {
-    background: #fff;
-    padding: 20px 0;
-}
-
-.home-section {
-    background: url('salon-background.jpg') no-repeat center center/cover;
-    height: 100vh;
-    position: relative;
-}
-
-.overlay {
-    background: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px;
-}
-
-.section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-
-.section p {
-    font-size: 1.1em;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 20px;
-}
-
-.service-item {
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.service-item img {
-    width: 100%;
-    height: auto;
-}
-
-.price-list {
-    list-style: none;
-    padding: 0;
-}
-
-.price-list li {
-    background: #f4f4f4;
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ddd;
-}
-
-.team-member {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.team-photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
-    cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.team-photo:hover {
-    transform: scale(1.05);
-}
-
-form {
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: left;
-    background: #fff;
-    padding: 20px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-form label {
-    display: block;
-    margin: 10px 0 5px;
-}
-
-form input, form textarea {
-    width: calc(100% - 22px);
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-}
-
-form button {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-    border: 0;
-    cursor: pointer;
-}
-
-form button:hover {
-    background: #555;
-}
-
-footer {
-    background: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer p {
-    margin: 10px 0 0;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 10px;
-}
-
-.social-icons a {
-    display: block;
-    margin: 0 10px;
-}
-
-.social-icons img {
-    width: 30px;
-    height: 30px;
-}
-
+/* Модальное окно */
 .modal {
-    display: none; /* Скрываем модальное окно по умолчанию */
+    display: none;
     position: fixed;
     z-index: 1000;
     left: 0;
@@ -243,36 +85,32 @@ footer p {
     width: 100%;
     height: 100%;
     overflow: auto;
-    background-color: rgba(0,0,0,0.9);
-    display: flex;
-    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
     align-items: center;
+    justify-content: center;
 }
 
 .modal-content {
     margin: auto;
     display: block;
-    max-width: 80%;
-    max-height: 80%;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh; /* Ограничение высоты */
 }
 
 #modalCaption {
-    margin: auto;
-    display: block;
-    text-align: center;
     color: #ccc;
-    padding: 10px 0;
-    height: 150px;
+    text-align: center;
 }
 
 .close {
     position: absolute;
-    top: 20px;
+    top: 15px;
     right: 35px;
-    color: #f1f1f1;
+    color: white;
     font-size: 40px;
     font-weight: bold;
-    transition: 0.3s;
+    cursor: pointer;
 }
 
 .close:hover,
@@ -282,35 +120,116 @@ footer p {
     cursor: pointer;
 }
 
-@media (max-width: 768px) {
-    nav {
+/* Стиль для скрытия шапки при прокрутке вниз */
+header.hidden {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Основной стиль */
+main {
+    padding-top: 100px; /* Отступ сверху, чтобы не перекрывать контент шапкой */
+}
+
+.section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+/* Форма */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin-top: 10px;
+}
+
+input, textarea {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* Стили для изображений команды */
+.team-member {
+    margin-top: 20px;
+}
+
+.team-photo {
+    border-radius: 50%; /* Круглая фотография */
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    width: 150px; /* Установите исходный размер фото */
+    height: 150px; /* Установите исходный размер фото */
+}
+
+.team-photo:hover {
+    transform: scale(1.05);
+}
+
+/* Стили для мобильного меню */
+@media screen and (max-width: 768px) {
+    .menu {
         display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
     }
 
-    nav.show {
-        display: block;
+    .menu.show {
+        display: flex;
     }
 
     .hamburger {
         display: flex;
     }
+}
 
-    nav ul {
-        display: flex;
-        flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 70px;
-        right: 0;
-        width: 200px;
-    }
+/* Стили для списка цен */
+.price-list {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0; /* Убираем отступы */
+    text-align: center; /* Центрируем текст */
+}
 
-    nav ul li {
-        text-align: center;
-        margin: 10px 0;
-    }
+.price-list li {
+    margin-bottom: 10px; /* Добавляем отступ между элементами списка */
+    font-size: 1.2em; /* Увеличиваем размер текста */
+}
 
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
+/* Стили для социальных иконок в подвале */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    width: 24px;
+    height: 24px;
 }
