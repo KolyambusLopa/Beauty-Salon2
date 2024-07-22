@@ -14,6 +14,7 @@ header {
     width: 100%;
     background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
     z-index: 1002; /* Убедитесь, что шапка выше меню */
+    transition: background-color 0.3s ease; /* Плавный переход */
 }
 
 .header-container {
@@ -110,7 +111,7 @@ footer {
     }
 }
 
-/* Меню открыто, измените фон шапки, если нужно */
-.nav-menu.show + header {
-    background-color: rgba(0, 0, 0, 0.7); /* Более темный фон для улучшения видимости */
+/* Дополнительное оформление для шапки при открытии меню */
+.nav-menu.show ~ header {
+    background-color: rgba(0, 0, 0, 0.5); /* Убедитесь, что фон сохраняется */
 }
