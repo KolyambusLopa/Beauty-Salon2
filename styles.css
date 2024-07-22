@@ -1,33 +1,23 @@
+/* Общий фон для всех страниц */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    overflow: hidden; /* Убираем горизонтальную прокрутку */
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
 }
 
-.content-wrapper {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-}
-
-.content-wrapper::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+/* Фон для главной страницы */
+.home-bg {
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-    z-index: -1;
 }
 
+/* Фон для остальных страниц */
+.black-bg {
+    background-color: black;
+}
+
+/* Общий стиль для меню */
 header {
     position: fixed;
     top: 0;
@@ -40,7 +30,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    position: relative;
 }
 
 .logo {
@@ -49,8 +38,6 @@ header {
     font-size: 36px;
     font-weight: bold;
     margin-left: 20px;
-    position: relative;
-    top: 10px;
 }
 
 .hamburger {
@@ -58,8 +45,6 @@ header {
     flex-direction: column;
     cursor: pointer;
     margin-right: 20px;
-    position: relative;
-    z-index: 1001;
 }
 
 .bar {
@@ -72,22 +57,21 @@ header {
 .nav-menu {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100vw;
+    left: 0; /* Измените, чтобы меню открывалось слева */
+    width: 300px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Меню скрыто за левым краем */
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     padding-top: 60px;
-    padding-left: 20px;
-    z-index: 1000;
+    z-index: 999;
 }
 
 .nav-menu.show {
-    transform: translateX(0);
+    transform: translateX(0); /* Показывает меню */
 }
 
 .nav-menu a {
@@ -103,34 +87,24 @@ header {
     color: #ddd;
 }
 
-main {
-    padding-top: 80px;
-    flex: 1;
-    position: relative;
-    z-index: 0;
-}
-
+/* Основной стиль для футера */
 footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
     text-align: right;
     padding: 5px 10px;
     background-color: transparent;
     color: white;
-    box-shadow: none;
-    box-sizing: border-box;
-    z-index: 0;
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 8px;
+    font-size: 8px; /* Уменьшенный размер шрифта футера */
 }
 
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
-    }
-
-    .hamburger {
-        margin-right: 20px;
     }
 }
