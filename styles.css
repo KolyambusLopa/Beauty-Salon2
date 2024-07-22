@@ -26,12 +26,16 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
+    margin-left: 20px;
+    position: relative;
+    top: 10px;
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    margin-right: 20px;
 }
 
 .bar {
@@ -45,7 +49,7 @@ header {
     position: fixed;
     top: 0;
     left: 0;
-    width: 100vw;
+    width: 300px;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.9);
     transform: translateX(-100%);
@@ -74,23 +78,10 @@ header {
     color: #ddd;
 }
 
-.close-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 30px;
-    height: 30px;
-    background: url('path-to-close-icon.png') no-repeat center center;
-    background-size: contain;
-    cursor: pointer;
-}
-
-/* Основной стиль */
 main {
     padding-top: 80px;
 }
 
-/* Стили для футера */
 footer {
     position: fixed;
     bottom: 0;
@@ -105,19 +96,15 @@ footer {
 
 .footer-content p {
     margin: 0;
-    font-size: 8px;
-}
-
-/* Убираем черную полосу, если она есть */
-.header-placeholder {
-    height: 0;
-    margin: 0;
-    padding: 0;
-    border: none;
+    font-size: 8px; /* Уменьшили размер шрифта футера */
 }
 
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
+    }
+
+    .hamburger {
+        margin-right: 10px;
     }
 }
