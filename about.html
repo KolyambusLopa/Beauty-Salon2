@@ -4,46 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>О нас - Raspberry Salon</title>
+    <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Montserrat', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: black;
-            color: white;
-        }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
-        h1 {
-            text-align: center;
-            font-size: 36px;
-            margin-top: 20px;
-        }
-        p {
-            font-size: 18px;
-            line-height: 1.6;
-            text-align: justify;
-        }
-        a {
-            color: #fff;
-            text-decoration: none;
-            display: block;
-            margin-top: 20px;
-            text-align: center;
-        }
-    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>О нас</h1>
-        <p>Raspberry Salon - это место, где красота встречается с профессионализмом. Наш салон предлагает широкий спектр услуг по уходу за волосами, кожей и ногтями. Мы стремимся предоставить нашим клиентам высококачественные услуги в уютной и расслабляющей атмосфере.</p>
-        <p>Наши мастера - это квалифицированные специалисты с многолетним опытом работы в индустрии красоты. Мы используем только лучшие продукты и самые современные методы, чтобы обеспечить вам превосходные результаты.</p>
-        <p>В Raspberry Salon вы найдете все необходимое для полного обновления и расслабления. Мы ценим каждого клиента и делаем все возможное, чтобы ваше посещение нашего салона стало незабываемым.</p>
-        <a href="index.html">На главную</a>
+    <div class="content-wrapper">
+        <header>
+            <div class="header-container">
+                <a href="index.html" class="logo">Raspberry Salon</a>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </div>
+            <nav id="menu" class="nav-menu">
+                <a href="about.html">О нас</a>
+                <a href="#booking">Запись</a>
+                <a href="#services">Услуги</a>
+                <a href="#prices">Цены</a>
+                <a href="#gallery">Галерея</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </header>
+
+        <main>
+            <h1>О нас</h1>
+            <p>Добро пожаловать в Raspberry Salon. Мы гордимся тем, что предоставляем высококачественные услуги в сфере красоты и ухода. Наша команда состоит из опытных профессионалов, готовых удовлетворить все ваши потребности и пожелания.</p>
+        </main>
+
+        <footer>
+            <div class="footer-content">
+                <p>© 2024 Raspberry Salon. Все права защищены.</p>
+                <div class="page-number">1 / 6</div>
+            </div>
+        </footer>
     </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
