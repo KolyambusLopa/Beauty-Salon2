@@ -1,71 +1,18 @@
-body {
-    background-color: black !important; /* Сделает фон черным */
-    color: white !important; /* Сделает текст белым */
-}
-/* Общий фон для всех страниц */
-body {
-    font-family: 'Montserrat', sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Фон для главной страницы */
-.home-bg {
+/* Общие стили для фонового изображения на главной странице */
+body.home-bg {
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
 }
 
-/* Фон для остальных страниц */
-.black-bg {
-    background-color: black;
-}
-
-/* Общий стиль для меню */
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-.header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-}
-
-.logo {
-    color: white;
-    text-decoration: none;
-    font-size: 36px;
-    font-weight: bold;
-    margin-left: 20px;
-}
-
-.hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    margin-right: 20px;
-}
-
-.bar {
-    background-color: white;
-    height: 3px;
-    width: 25px;
-    margin: 3px 0;
-}
-
+/* Стили для черного фона меню */
 .nav-menu {
     position: fixed;
     top: 0;
-    left: 0; /* Измените, чтобы меню открывалось слева */
-    width: 300px;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.9);
-    transform: translateX(-100%); /* Меню скрыто за левым краем */
+    left: 0; /* Перемещаем меню влево */
+    width: 100vw; /* Устанавливаем ширину на 100% от видимой области окна */
+    height: 100vh; /* Устанавливаем высоту на 100% от видимой области окна */
+    background-color: rgba(0, 0, 0, 0.9); /* Черный фон с небольшой прозрачностью */
+    transform: translateX(-100%); /* Начальное положение меню вне экрана */
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -75,9 +22,22 @@ header {
 }
 
 .nav-menu.show {
-    transform: translateX(0); /* Показывает меню */
+    transform: translateX(0); /* Меню появится на экране */
 }
 
+/* Стили для крестика */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    background: white;
+    clip-path: cross; /* Используем clip-path для создания крестика */
+    cursor: pointer;
+}
+
+/* Стили для ссылок в меню */
 .nav-menu a {
     color: white;
     text-decoration: none;
@@ -91,7 +51,7 @@ header {
     color: #ddd;
 }
 
-/* Основной стиль для футера */
+/* Стили для футера */
 footer {
     position: fixed;
     bottom: 0;
@@ -100,15 +60,11 @@ footer {
     padding: 5px 10px;
     background-color: transparent;
     color: white;
+    box-shadow: none;
+    box-sizing: border-box;
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 8px; /* Уменьшенный размер шрифта футера */
-}
-
-@media screen and (max-width: 768px) {
-    .logo {
-        font-size: 28px;
-    }
+    font-size: 8px; /* Уменьшили размер шрифта футера */
 }
