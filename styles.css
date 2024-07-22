@@ -3,7 +3,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background: url('path/to/your-background-image.jpg') no-repeat center center fixed; /* Замените на путь к вашему фоновому изображению */
+    background: url('images/background.jpg') no-repeat center center fixed; /* Путь к вашему фоновому изображению */
     background-size: cover; /* Чтобы изображение покрывало весь экран */
 }
 
@@ -26,12 +26,16 @@ header {
     text-decoration: none;
     font-size: 36px; /* Размер шрифта для логотипа */
     font-weight: bold;
+    margin-left: 20px; /* Отступ слева от края */
+    position: relative;
+    top: 10px; /* Смещение вниз */
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    margin-right: 20px; /* Отступ справа от края */
 }
 
 .bar {
