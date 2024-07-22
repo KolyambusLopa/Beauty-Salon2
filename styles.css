@@ -21,6 +21,7 @@ header {
     display: flex; /* Используем flexbox */
     justify-content: space-between; /* Распределяем элементы по горизонтали */
     align-items: center; /* Выравниваем элементы по вертикали */
+    text-align: center; /* Центрирование текста в шапке */
 }
 
 /* Логотип */
@@ -28,7 +29,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 24px;
-    text-align: center; /* Центрирование логотипа */
+    margin: 0 auto; /* Центрирование логотипа */
 }
 
 /* Навигация */
@@ -202,6 +203,8 @@ button:hover {
         display: flex;
     }
 }
+
+/* Стили для списка цен */
 .price-list {
     list-style-type: none; /* Убираем маркеры списка */
     padding: 0; /* Убираем отступы */
@@ -212,4 +215,3 @@ button:hover {
     margin-bottom: 10px; /* Добавляем отступ между элементами списка */
     font-size: 1.2em; /* Увеличиваем размер текста */
 }
-
