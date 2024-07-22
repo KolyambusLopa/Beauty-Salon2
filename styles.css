@@ -6,26 +6,21 @@ body {
     box-sizing: border-box;
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
-    text-align: center; /* Центрирование содержимого контейнера */
-}
-
 header {
     background-color: rgba(0, 0, 0, 0.7); /* Полупрозрачный фон шапки */
     color: white; /* Цвет текста */
-    padding: 20px 0; /* Отступы шапки */
+    padding: 20px; /* Отступы шапки */
     position: fixed; /* Фиксированное положение */
     width: 100%; /* Ширина на всю ширину */
     top: 0;
     z-index: 1000; /* Убедитесь, что шапка находится поверх других элементов */
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Распределяем элементы по краям */
     align-items: center; /* Центрирование элементов по вертикали */
     padding: 0 20px; /* Отступы от краев */
 }
 
+/* Логотип */
 .logo-container {
     text-align: left; /* Выравнивание текста логотипа по левому краю */
 }
@@ -67,7 +62,6 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
-    margin-left: auto; /* Отступ от логотипа */
 }
 
 .bar {
