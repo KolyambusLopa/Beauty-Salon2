@@ -5,47 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Raspberry Salon</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Шапка сайта -->
     <header>
-        <a href="#home" class="logo">Raspberry Salon</a>
-        <div class="hamburger" onclick="toggleMenu()">
-            <div class="bar"></div>
-            <div class="bar"></div>
-            <div class="bar"></div>
+        <div class="container">
+            <div class="logo-container">
+                <a href="#home" class="logo">Raspberry Salon</a>
+            </div>
+            <nav>
+                <ul id="menu" class="menu">
+                    <li><a href="#about">О нас</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#gallery">Галерея</a></li>
+                    <li><a href="#contact">Контакты</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+            </nav>
         </div>
-        <nav class="menu">
-            <ul>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#prices">Цены</a></li>
-                <li><a href="#gallery">Галерея</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
     </header>
 
-    <!-- Главный контент сайта -->
+    <section class="hero" id="home">
+        <h1>Добро пожаловать в Raspberry Salon</h1>
+        <p>Ваше идеальное место для красоты и расслабления.</p>
+    </section>
+
     <main>
-        <section id="home" class="hero">
-            <h1>Добро пожаловать в Raspberry Salon</h1>
-            <p>Ваше идеальное место для красоты и расслабления</p>
+        <section id="about" class="section">
+            <div class="container">
+                <h2>О нас</h2>
+                <p>Мы предоставляем лучшие услуги по уходу за вашей внешностью.</p>
+            </div>
         </section>
-        <section id="about">
-            <h2>О нас</h2>
-            <p>Информация о салоне</p>
+
+        <section id="prices" class="section">
+            <div class="container">
+                <h2>Цены</h2>
+                <ul class="price-list">
+                    <li>Реснички - 20 Euro</li>
+                    <li>Бровки - 25 Euro</li>
+                    <li>Лами реснички - 35 Euro</li>
+                    <li>Макияж - 30 Euro</li>
+                </ul>
+            </div>
         </section>
-        <section id="prices">
-            <h2>Цены</h2>
-            <p>Список цен</p>
+
+        <section id="gallery" class="section">
+            <div class="container">
+                <h2>Галерея</h2>
+                <p>Посмотрите на наши работы.</p>
+            </div>
         </section>
-        <section id="gallery">
-            <h2>Галерея</h2>
-            <p>Фото работ</p>
-        </section>
-        <section id="contact">
-            <h2>Контакты</h2>
-            <p>Контактная информация</p>
+
+        <section id="contact" class="section">
+            <div class="container">
+                <h2>Контакты</h2>
+                <form action="#">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="message">Сообщение:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    <button type="submit">Отправить</button>
+                </form>
+            </div>
         </section>
     </main>
 
