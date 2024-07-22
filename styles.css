@@ -1,4 +1,3 @@
-/* Общие стили */
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
@@ -8,7 +7,6 @@ body {
     background-size: cover;
 }
 
-/* Стили для заголовка и меню */
 header {
     position: fixed;
     top: 0;
@@ -21,7 +19,6 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.5); /* Добавим немного фона */
 }
 
 .logo {
@@ -35,7 +32,6 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px;
 }
 
 .bar {
@@ -45,7 +41,6 @@ header {
     margin: 3px 0;
 }
 
-/* Стили для меню */
 .nav-menu {
     position: fixed;
     top: 0;
@@ -66,18 +61,6 @@ header {
     transform: translateX(0);
 }
 
-.close-btn {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    width: 30px;
-    height: 30px;
-    background: white;
-    cursor: pointer;
-    clip-path: cross; /* Крестик с помощью clip-path */
-}
-
-/* Стили для ссылок в меню */
 .nav-menu a {
     color: white;
     text-decoration: none;
@@ -91,9 +74,20 @@ header {
     color: #ddd;
 }
 
+.close-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+    background: url('path-to-close-icon.png') no-repeat center center;
+    background-size: contain;
+    cursor: pointer;
+}
+
 /* Основной стиль */
 main {
-    padding-top: 80px; /* Отступ для основного контента */
+    padding-top: 80px;
 }
 
 /* Стили для футера */
@@ -105,10 +99,25 @@ footer {
     padding: 5px 10px;
     background-color: transparent;
     color: white;
+    box-shadow: none;
     box-sizing: border-box;
 }
 
 .footer-content p {
     margin: 0;
-    font-size: 8px; /* Уменьшили размер шрифта футера */
+    font-size: 8px;
+}
+
+/* Убираем черную полосу, если она есть */
+.header-placeholder {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+@media screen and (max-width: 768px) {
+    .logo {
+        font-size: 28px;
+    }
 }
