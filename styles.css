@@ -5,14 +5,7 @@ body {
     box-sizing: border-box;
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
-}
-
-header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1000;
-    background: rgba(0, 0, 0, 0.5); /* Добавил фон для контраста */
+    height: 100%; /* Добавлено, чтобы элементы оставались на своих местах */
 }
 
 .header-container {
@@ -28,8 +21,6 @@ header {
     font-size: 36px;
     font-weight: bold;
     margin-left: 20px;
-    position: relative;
-    top: 10px;
 }
 
 .hamburger {
@@ -85,6 +76,7 @@ main {
     padding-top: 80px;
     position: relative;
     z-index: 0;
+    height: 100%; /* Добавлено, чтобы основной контент занимал всю высоту */
 }
 
 /* Стили для футера */
