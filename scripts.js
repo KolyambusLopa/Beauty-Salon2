@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Закрытие меню при клике вне его области
         document.addEventListener('click', (event) => {
-            if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
+            if (!hamburger.contains(event.target) && !menu.contains(event.target) && !closeBtn.contains(event.target)) {
                 menu.classList.remove('show');
                 closeBtn.style.display = 'none';
             }
