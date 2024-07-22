@@ -132,3 +132,7 @@ footer {
         font-size: 28px;
     }
 }
+.nav-menu {
+    background-color: rgba(0, 0, 0, 0.9) !important; /* Обеспечьте, чтобы стиль применялся */
+}
+
