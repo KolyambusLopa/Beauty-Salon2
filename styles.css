@@ -12,6 +12,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
+    background: transparent; /* Убедитесь, что фон шапки прозрачный */
 }
 
 .header-container {
@@ -53,13 +54,14 @@ header {
     width: 300px; /* Ширина меню */
     height: 100vh; /* Полная высота экрана */
     background-color: rgba(0, 0, 0, 0.9); /* Черный фон с прозрачностью */
-    transform: translateX(-100%);
+    transform: translateX(-100%); /* Скрытое состояние меню */
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
     align-items: flex-start; /* Выравнивание элементов по левому краю */
     padding-top: 60px;
     z-index: 999;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Добавляем тень для выделения */
 }
 
 /* Появление меню */
