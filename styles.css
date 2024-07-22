@@ -127,3 +127,7 @@ footer {
         font-size: 28px;
     }
 }
+.nav-menu {
+    border: 2px solid red; /* Добавьте временно для отладки */
+}
+
