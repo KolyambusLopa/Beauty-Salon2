@@ -16,6 +16,8 @@ header {
     background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для шапки */
     z-index: 1002; /* Шапка должна быть выше меню */
     transition: background-color 0.3s ease; /* Плавный переход фона */
+    box-shadow: none; /* Удаление тени шапки */
+    border-bottom: none; /* Удаление нижней границы шапки */
 }
 
 .header-container {
@@ -24,6 +26,7 @@ header {
     align-items: center;
     padding: 20px;
     position: relative; /* Важно для z-index логотипа и бургер-меню */
+    background: none; /* Удаление фона контейнера */
 }
 
 .logo {
