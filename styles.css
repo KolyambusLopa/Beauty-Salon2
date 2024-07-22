@@ -100,19 +100,6 @@ footer {
     font-size: 8px;
 }
 
-/* Стили для крестика */
-.close-btn {
-    font-size: 36px;
-    color: white;
-    cursor: pointer;
-    padding: 10px;
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 1002;
-    display: none;
-}
-
 /* Стили для мобильного меню */
 @media screen and (max-width: 768px) {
     .logo {
