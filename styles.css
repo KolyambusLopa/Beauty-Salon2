@@ -5,6 +5,7 @@ body {
     box-sizing: border-box;
     background: url('images/background.jpg') no-repeat center center fixed;
     background-size: cover;
+    background-attachment: fixed; /* Закрепляем фон, чтобы он не прокручивался */
 }
 
 header {
@@ -51,11 +52,11 @@ header {
 .nav-menu {
     position: fixed;
     top: 0;
-    left: 0; /* Меню теперь открывается слева */
-    width: 100vw; /* Ширина на всю ширину экрана */
-    height: 100vh; /* Высота на всю высоту экрана */
-    background-color: rgba(0, 0, 0, 0.9); /* Черный фон с небольшой прозрачностью */
-    transform: translateX(-100%); /* Меню скрыто слева */
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    transform: translateX(-100%);
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
@@ -82,7 +83,12 @@ header {
     color: #ddd;
 }
 
-/* Стили для футера */
+main {
+    padding-top: 80px;
+    position: relative;
+    z-index: 0;
+}
+
 footer {
     position: fixed;
     bottom: 0;
@@ -100,7 +106,6 @@ footer {
     font-size: 8px;
 }
 
-/* Стили для мобильного меню */
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
