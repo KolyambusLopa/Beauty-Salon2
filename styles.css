@@ -42,6 +42,7 @@ header {
     flex-direction: column;
     cursor: pointer;
     margin-right: 20px;
+    z-index: 1001; /* Убедитесь, что меню-бургер над меню */
 }
 
 .bar {
@@ -65,6 +66,7 @@ header {
     flex-direction: column;
     align-items: flex-start;
     padding-top: 60px;
+    padding-left: 40px; /* Отступ слева для ссылок */
     z-index: 999;
     overflow: hidden; /* Предотвращаем прокрутку */
 }
@@ -80,7 +82,9 @@ header {
     color: white;
     cursor: pointer;
     padding: 10px;
-    align-self: flex-end;
+    align-self: flex-start; /* Выровнять по левому краю меню */
+    margin-left: 20px; /* Отступ слева */
+    margin-top: 20px; /* Отступ сверху */
 }
 
 /* Стили для навигационных ссылок */
@@ -91,6 +95,11 @@ header {
     margin: 20px 0;
     text-transform: uppercase;
     transition: color 0.3s ease;
+}
+
+/* Добавление отступа слева для ссылок */
+.nav-menu a {
+    margin-left: 20px; /* Отступ слева для ссылок */
 }
 
 .nav-menu a:hover {
@@ -132,7 +141,3 @@ footer {
         font-size: 28px;
     }
 }
-.nav-menu {
-    background-color: rgba(0, 0, 0, 0.9) !important; /* Обеспечьте, чтобы стиль применялся */
-}
-
