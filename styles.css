@@ -33,7 +33,9 @@ header {
 .logo {
     color: white;
     text-decoration: none;
-    font-size: 24px;
+    font-size: 36px; /* Увеличенный размер шрифта */
+    font-weight: bold; /* Жирное начертание */
+    letter-spacing: 1px; /* Расстояние между буквами */
 }
 
 /* Навигация */
@@ -65,6 +67,7 @@ nav {
     display: none;
     flex-direction: column;
     cursor: pointer;
+    margin-left: auto; /* Отступ от логотипа */
 }
 
 .bar {
@@ -86,6 +89,17 @@ nav {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+.hero h1 {
+    font-size: 48px; /* Размер шрифта для заголовка */
+    margin: 0; /* Убираем отступы */
+    font-weight: bold; /* Жирное начертание */
+}
+
+.hero p {
+    font-size: 24px; /* Размер шрифта для текста */
+    margin: 10px 0;
 }
 
 /* Основной стиль */
