@@ -14,15 +14,16 @@ header {
     width: 100%;
     z-index: 1003;
     padding: 0 20px;
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для шапки, чтобы было видно её на фоне */
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 20px 0;
 }
 
 .logo {
@@ -30,13 +31,13 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    margin-left: 20px;
+    margin-left: 0; /* Убедитесь, что логотип находится слева */
+    margin-right: auto; /* Сдвигаем логотип влево */
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    margin-left: auto;
 }
 
 .phone-number {
@@ -155,25 +156,25 @@ footer {
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
-        margin-left: 0; /* Логотип сдвинут к левому краю на мобильных устройствах */
+        margin-left: 0;
     }
 
     .phone-number {
-        display: none; /* Скрываем номер телефона на мобильных устройствах */
+        display: none;
     }
 
     .hamburger {
-        margin-left: 10px; /* Сдвигаем кнопку меню левее от края экрана на мобильных устройствах */
+        margin-left: 10px;
     }
 
     .nav-menu {
-        padding-bottom: 80px; /* Добавляем отступ внизу для номера телефона */
+        padding-bottom: 80px;
     }
 
     .nav-menu:after {
-        content: "+371 25 130 884"; /* Добавляем номер телефона в меню */
+        content: "+371 25 130 884";
         color: white;
-        font-size: 14px; /* Размер текста на мобильных устройствах */
+        font-size: 14px;
         margin-top: auto;
         padding: 10px;
         text-align: center;
