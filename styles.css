@@ -18,7 +18,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003;
-    padding: 0 20px; /* Общие отступы по бокам */
+    padding: 0 20px;
 }
 
 .header-container {
@@ -26,8 +26,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    max-width: 1200px; /* Ограничиваем ширину контейнера */
-    margin: 0 auto; /* Выравнивание по центру */
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .logo {
@@ -35,21 +35,20 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    margin-left: 20px; /* Сдвигаем логотип почти к левому краю */
+    margin-left: 20px;
     z-index: 1004;
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Сдвигаем элементы вправо */
 }
 
 .phone-number {
     color: white;
     text-decoration: none;
-    font-size: 16px; /* Уменьшаем размер текста номера телефона */
-    margin-right: 20px; /* Увеличиваем отступ справа */
+    font-size: 14px; /* Уменьшение размера текста номера телефона */
+    margin-right: 20px;
     z-index: 1004;
 }
 
@@ -57,7 +56,7 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px; /* Увеличиваем отступ справа */
+    margin-right: 20px;
     z-index: 1004;
 }
 
@@ -163,7 +162,7 @@ footer {
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
-        margin-left: 0; /* Убираем левый отступ для логотипа на мобильных устройствах */
+        margin-left: 0; /* Логотип сдвинут к левому краю на мобильных устройствах */
     }
 
     .phone-number {
@@ -171,7 +170,7 @@ footer {
     }
 
     .hamburger {
-        margin-left: 20px; /* Сдвигаем кнопку меню левее от края экрана на мобильных устройствах */
+        margin-left: 10px; /* Сдвигаем кнопку меню левее от края экрана на мобильных устройствах */
     }
 
     .nav-menu {
@@ -181,7 +180,7 @@ footer {
     .nav-menu:after {
         content: "+371 25 130 884"; /* Добавляем номер телефона в меню */
         color: white;
-        font-size: 16px;
+        font-size: 14px; /* Размер текста на мобильных устройствах */
         margin-top: auto;
         padding: 10px;
         text-align: center;
