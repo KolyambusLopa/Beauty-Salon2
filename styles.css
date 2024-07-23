@@ -32,15 +32,26 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    margin-left: 20px;
     z-index: 1004; /* Увеличиваем z-index чтобы логотип был выше меню */
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.phone-number {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    margin-right: 20px;
+    z-index: 1004; /* Увеличиваем z-index чтобы номер телефона был выше меню */
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px;
     z-index: 1004; /* Увеличиваем z-index чтобы бургер был выше меню */
 }
 
