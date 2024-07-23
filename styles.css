@@ -13,33 +13,36 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003;
-    background-color: transparent; /* Убедитесь, что фоновый цвет прозрачный */
+    background-color: transparent; /* Убедитесь, что фон прозрачный */
     box-shadow: none; /* Уберите тень, если она есть */
 }
 
+/* Контейнер заголовка */
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 20px 10px;
     box-sizing: border-box;
 }
 
+/* Логотип */
 .logo {
     color: white;
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    /* Отменим левый отступ на экранах большего размера */
+    margin-left: 20px; /* Сдвигаем логотип к левому краю */
 }
 
+/* Правый блок (номер телефона и меню) */
 .header-right {
     display: flex;
     align-items: center;
+    margin-left: auto;
 }
 
+/* Номер телефона */
 .phone-number {
     color: white;
     text-decoration: none;
@@ -47,6 +50,7 @@ header {
     margin-right: 20px;
 }
 
+/* Меню-гамбургер */
 .hamburger {
     display: flex;
     flex-direction: column;
@@ -60,6 +64,7 @@ header {
     margin: 3px 0;
 }
 
+/* Меню */
 .nav-menu {
     position: fixed;
     top: 0;
@@ -82,6 +87,7 @@ header {
     opacity: 1;
 }
 
+/* Ссылки в меню */
 .nav-menu a {
     color: white;
     text-decoration: none;
@@ -155,17 +161,12 @@ footer {
 /* Стили для компьютеров */
 @media screen and (min-width: 769px) {
     .header-container {
-        justify-content: space-between;
-        padding-left: 10px; /* Устанавливаем отступ слева для всего контейнера */
-    }
-
-    .logo {
-        margin-left: 0; /* Убираем отступ слева */
+        padding-left: 20px; /* Убираем отступ слева, чтобы логотип был ближе к краю */
+        padding-right: 20px; /* Добавляем отступ справа для блока с номером телефона и меню */
     }
 
     .header-right {
         margin-left: auto; /* Перемещаем блок с номером телефона и меню вправо */
-        padding-right: 20px; /* Отступ справа для блока с номером телефона и меню */
     }
 }
 
