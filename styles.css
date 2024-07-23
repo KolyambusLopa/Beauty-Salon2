@@ -13,7 +13,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: transparent; /* Убедитесь, что фоновый цвет прозрачный */
+    box-shadow: none; /* Уберите тень, если она есть */
 }
 
 .header-container {
@@ -31,7 +32,7 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    margin-left: 20px; /* Уменьшен отступ от левого края */
+    margin-left: 20px; /* Уменьшенный отступ от левого края */
 }
 
 .header-right {
