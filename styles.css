@@ -17,7 +17,7 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1002;
+    z-index: 1003; /* Увеличиваем z-index чтобы заголовок был выше меню */
 }
 
 .header-container {
@@ -33,6 +33,7 @@ header {
     font-size: 36px;
     font-weight: bold;
     margin-left: 20px;
+    z-index: 1004; /* Увеличиваем z-index чтобы логотип был выше меню */
 }
 
 .hamburger {
@@ -40,7 +41,7 @@ header {
     flex-direction: column;
     cursor: pointer;
     margin-right: 20px;
-    z-index: 1003;
+    z-index: 1004; /* Увеличиваем z-index чтобы бургер был выше меню */
 }
 
 .bar {
@@ -63,7 +64,7 @@ header {
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
-    z-index: 1001;
+    z-index: 1002; /* Меню остается ниже заголовка */
 }
 
 .nav-menu.show {
