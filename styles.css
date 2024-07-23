@@ -13,8 +13,8 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003;
-    background-color: transparent; /* Убедитесь, что фон прозрачный */
-    box-shadow: none; /* Уберите тень, если она есть */
+    background-color: transparent;
+    box-shadow: none;
 }
 
 /* Контейнер заголовка */
@@ -32,7 +32,7 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    margin-left: 20px; /* Сдвигаем логотип к левому краю */
+    margin-left: 20px;
 }
 
 /* Правый блок (номер телефона и меню) */
@@ -161,12 +161,12 @@ footer {
 /* Стили для компьютеров */
 @media screen and (min-width: 769px) {
     .header-container {
-        padding-left: 20px; /* Убираем отступ слева, чтобы логотип был ближе к краю */
-        padding-right: 20px; /* Добавляем отступ справа для блока с номером телефона и меню */
+        padding-left: 20px;
+        padding-right: 20px;
     }
 
     .header-right {
-        margin-left: auto; /* Перемещаем блок с номером телефона и меню вправо */
+        margin-left: auto;
     }
 }
 
@@ -177,7 +177,7 @@ footer {
     }
 
     .phone-number {
-        display: none; /* Номер телефона скрыт на мобильных устройствах в шапке */
+        display: none;
     }
 
     .hamburger {
@@ -185,41 +185,27 @@ footer {
     }
 
     .nav-menu {
-        padding-bottom: 60px; /* Добавить отступ снизу для номера телефона */
+        padding-bottom: 60px;
     }
 
-    .nav-menu:after {
-        content: "+371 25 130 884";
-        color: white;
-        font-size: 14px;
-        padding: 10px;
-        text-align: center;
-        display: block;
-        text-decoration: none; /* Убрать подчеркивание */
+    .nav-menu.show a:nth-child(7) {
+        transition-delay: 1.4s;
         visibility: visible;
+    }
+
+    .phone-number-mobile {
+        color: white;
+        text-decoration: none;
+        font-size: 14px;
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.9s ease, transform 0.9s ease;
-        transition-delay: 1.4s; /* Задержка перед появлением номера телефона */
+        visibility: hidden;
     }
 
-    .nav-menu.show:after {
+    .nav-menu.show .phone-number-mobile {
         opacity: 1;
         transform: translateY(0);
-    }
-
-    .nav-menu:after {
-        content: "+37125130884"; /* Номер без пробелов для кликабельности */
-        color: white;
-        font-size: 14px;
-        padding: 10px;
-        text-align: center;
-        display: block;
-        text-decoration: none; /* Убрать подчеркивание */
         visibility: visible;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: opacity 0.9s ease, transform 0.9s ease;
-        transition-delay: 1.4s; /* Задержка перед появлением номера телефона */
     }
 }
