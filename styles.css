@@ -18,7 +18,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003; /* Увеличиваем z-index чтобы заголовок был выше меню */
-    padding: 0 10px; /* Уменьшаем отступы по бокам */
+    padding: 0 20px; /* Увеличиваем отступы по бокам */
 }
 
 .header-container {
@@ -47,7 +47,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 16px; /* Уменьшаем размер текста номера телефона */
-    margin-right: 10px; /* Уменьшаем отступ справа */
+    margin-right: 20px; /* Увеличиваем отступ справа */
     z-index: 1004; /* Увеличиваем z-index чтобы номер телефона был выше меню */
 }
 
@@ -55,6 +55,7 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
+    margin-right: 10px; /* Сдвигаем кнопку меню левее от края экрана */
     z-index: 1004; /* Увеличиваем z-index чтобы бургер был выше меню */
 }
 
@@ -168,7 +169,7 @@ footer {
     }
 
     .hamburger {
-        margin-left: 10px; /* Сдвигаем кнопку меню левее */
+        margin-left: 20px; /* Сдвигаем кнопку меню левее от края экрана */
     }
 
     .nav-menu {
