@@ -13,7 +13,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для шапки */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .header-container {
@@ -37,6 +37,7 @@ header {
 .header-right {
     display: flex;
     align-items: center;
+    margin-left: auto; /* Перемещение блока с номером телефона и меню вправо */
 }
 
 .phone-number {
@@ -157,13 +158,11 @@ footer {
     }
 
     .logo {
-        margin-left: 0;
+        margin-left: 0; /* Переместить логотип ближе к левому краю */
     }
 
     .header-right {
         margin-left: auto;
-        display: flex;
-        align-items: center;
     }
 }
 
@@ -192,12 +191,6 @@ footer {
         text-align: center;
         display: block;
         text-decoration: none; /* Убрать подчеркивание */
-    }
-
-    .nav-menu:after {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        text-align: center;
+        visibility: visible;
     }
 }
