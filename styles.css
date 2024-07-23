@@ -17,8 +17,8 @@ header {
     position: fixed;
     top: 0;
     width: 100%;
-    z-index: 1003; /* Увеличиваем z-index чтобы заголовок был выше меню */
-    padding: 0 20px; /* Увеличиваем отступы по бокам */
+    z-index: 1003;
+    padding: 0 20px; /* Общие отступы по бокам */
 }
 
 .header-container {
@@ -35,12 +35,14 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    z-index: 1004; /* Увеличиваем z-index чтобы логотип был выше меню */
+    margin-left: 20px; /* Сдвигаем логотип почти к левому краю */
+    z-index: 1004;
 }
 
 .header-right {
     display: flex;
     align-items: center;
+    margin-left: auto; /* Сдвигаем элементы вправо */
 }
 
 .phone-number {
@@ -48,15 +50,15 @@ header {
     text-decoration: none;
     font-size: 16px; /* Уменьшаем размер текста номера телефона */
     margin-right: 20px; /* Увеличиваем отступ справа */
-    z-index: 1004; /* Увеличиваем z-index чтобы номер телефона был выше меню */
+    z-index: 1004;
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 10px; /* Сдвигаем кнопку меню левее от края экрана */
-    z-index: 1004; /* Увеличиваем z-index чтобы бургер был выше меню */
+    margin-right: 20px; /* Увеличиваем отступ справа */
+    z-index: 1004;
 }
 
 .bar {
@@ -75,12 +77,12 @@ header {
     background-color: rgba(0, 0, 0, 0.9);
     transform: translateX(-100%);
     opacity: 0;
-    transition: opacity 0.9s ease, transform 0.9s ease; /* Увеличено время перехода до 0.9s */
+    transition: opacity 0.9s ease, transform 0.9s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding-top: 60px;
-    z-index: 1002; /* Меню остается ниже заголовка */
+    z-index: 1002;
 }
 
 .nav-menu.show {
@@ -93,41 +95,40 @@ header {
     text-decoration: none;
     font-size: 24px;
     margin: 20px 0;
-    opacity: 0; /* Скрываем элементы по умолчанию */
-    transform: translateY(20px); /* Изначально смещаем текст вниз */
-    transition: opacity 0.9s ease, transform 0.9s ease; /* Плавное появление текста */
-    visibility: hidden; /* Скрываем элементы до появления */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    visibility: hidden;
 }
 
-/* Плавное появление текста по порядку */
 .nav-menu.show a:nth-child(1) {
     transition-delay: 0.2s;
-    visibility: visible; /* Делаем видимыми по мере появления */
+    visibility: visible;
 }
 .nav-menu.show a:nth-child(2) {
     transition-delay: 0.4s;
-    visibility: visible; /* Делаем видимыми по мере появления */
+    visibility: visible;
 }
 .nav-menu.show a:nth-child(3) {
     transition-delay: 0.6s;
-    visibility: visible; /* Делаем видимыми по мере появления */
+    visibility: visible;
 }
 .nav-menu.show a:nth-child(4) {
     transition-delay: 0.8s;
-    visibility: visible; /* Делаем видимыми по мере появления */
+    visibility: visible;
 }
 .nav-menu.show a:nth-child(5) {
     transition-delay: 1s;
-    visibility: visible; /* Делаем видимыми по мере появления */
+    visibility: visible;
 }
 .nav-menu.show a:nth-child(6) {
     transition-delay: 1.2s;
-    visibility: visible; /* Делаем видимыми по мере появления */
+    visibility: visible;
 }
 
 .nav-menu.show a {
     opacity: 1;
-    transform: translateY(0); /* Перемещаем текст на место */
+    transform: translateY(0);
 }
 
 .nav-menu a:hover {
@@ -162,6 +163,7 @@ footer {
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
+        margin-left: 0; /* Убираем левый отступ для логотипа на мобильных устройствах */
     }
 
     .phone-number {
@@ -169,7 +171,7 @@ footer {
     }
 
     .hamburger {
-        margin-left: 20px; /* Сдвигаем кнопку меню левее от края экрана */
+        margin-left: 20px; /* Сдвигаем кнопку меню левее от края экрана на мобильных устройствах */
     }
 
     .nav-menu {
@@ -183,6 +185,6 @@ footer {
         margin-top: auto;
         padding: 10px;
         text-align: center;
-        display: block; /* Убедитесь, что номер телефона отображается */
+        display: block;
     }
 }
