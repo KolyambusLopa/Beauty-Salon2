@@ -4,25 +4,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburger && menu) {
         hamburger.addEventListener('click', () => {
-            if (menu.classList.contains('show')) {
-                menu.classList.remove('show');
-                menu.style.animation = 'none'; // Убираем анимацию при закрытии
-                setTimeout(() => {
-                    menu.style.animation = ''; // Сбрасываем стиль анимации
-                }, 600); // Время должно соответствовать длительности анимации
-            } else {
-                menu.classList.add('show');
-                menu.style.animation = 'slide-in 0.6s ease-in-out'; // Добавляем анимацию при открытии
-            }
+            // Открытие и закрытие меню с анимацией
+            menu.classList.toggle('show');
         });
 
         document.addEventListener('click', (event) => {
             if (!hamburger.contains(event.target) && !menu.contains(event.target)) {
-                menu.classList.remove('show');
-                menu.style.animation = 'none'; // Убираем анимацию при закрытии
-                setTimeout(() => {
-                    menu.style.animation = ''; // Сбрасываем стиль анимации
-                }, 600); // Время должно соответствовать длительности анимации
+                if (menu.classList.contains('show')) {
+                    menu.classList.remove('show');
+                }
             }
         });
     } else {
