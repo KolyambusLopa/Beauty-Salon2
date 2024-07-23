@@ -18,6 +18,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003; /* Увеличиваем z-index чтобы заголовок был выше меню */
+    padding: 0 20px; /* Добавляем отступы по бокам для выравнивания */
 }
 
 .header-container {
@@ -25,6 +26,8 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
+    max-width: 1200px; /* Ограничиваем ширину контейнера */
+    margin: 0 auto; /* Выравнивание по центру */
 }
 
 .logo {
@@ -43,7 +46,7 @@ header {
 .phone-number {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 16px; /* Уменьшаем размер текста номера телефона */
     margin-right: 20px;
     z-index: 1004; /* Увеличиваем z-index чтобы номер телефона был выше меню */
 }
@@ -158,5 +161,22 @@ footer {
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
+    }
+
+    .phone-number {
+        display: none; /* Скрываем номер телефона на мобильных устройствах */
+    }
+
+    .nav-menu {
+        padding-bottom: 60px; /* Добавляем отступ внизу для номера телефона */
+    }
+
+    .nav-menu:after {
+        content: "+371 25 130 884"; /* Добавляем номер телефона в меню */
+        color: white;
+        font-size: 16px;
+        margin-top: auto;
+        padding: 10px;
+        text-align: center;
     }
 }
