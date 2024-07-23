@@ -59,7 +59,8 @@ header {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     transform: translateX(-100%);
-    transition: transform 0.8s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Плавное открытие и закрытие */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Плавное открытие и закрытие */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -69,6 +70,7 @@ header {
 
 .nav-menu.show {
     transform: translateX(0);
+    opacity: 1;
 }
 
 .nav-menu a {
