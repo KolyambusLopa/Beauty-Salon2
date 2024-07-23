@@ -197,5 +197,29 @@ footer {
         display: block;
         text-decoration: none; /* Убрать подчеркивание */
         visibility: visible;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+        transition-delay: 1.4s; /* Задержка перед появлением номера телефона */
+    }
+
+    .nav-menu.show:after {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .nav-menu:after {
+        content: "+37125130884"; /* Номер без пробелов для кликабельности */
+        color: white;
+        font-size: 14px;
+        padding: 10px;
+        text-align: center;
+        display: block;
+        text-decoration: none; /* Убрать подчеркивание */
+        visibility: visible;
+        opacity: 0;
+        transform: translateY(20px);
+        transition: opacity 0.9s ease, transform 0.9s ease;
+        transition-delay: 1.4s; /* Задержка перед появлением номера телефона */
     }
 }
