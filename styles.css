@@ -32,13 +32,12 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    margin-left: 0; /* Логотип близко к левому краю на компьютерах */
+    /* Отменим левый отступ на экранах большего размера */
 }
 
 .header-right {
     display: flex;
     align-items: center;
-    margin-left: auto; /* Перемещение блока с номером телефона и меню вправо */
 }
 
 .phone-number {
@@ -153,20 +152,24 @@ footer {
     font-size: 8px;
 }
 
+/* Стили для компьютеров */
 @media screen and (min-width: 769px) {
     .header-container {
         justify-content: space-between;
+        padding-left: 10px; /* Устанавливаем отступ слева для всего контейнера */
     }
 
     .logo {
-        margin-left: 10px; /* Перемещение логотипа ближе к левому краю */
+        margin-left: 0; /* Убираем отступ слева */
     }
 
     .header-right {
-        margin-left: auto;
+        margin-left: auto; /* Перемещаем блок с номером телефона и меню вправо */
+        padding-right: 20px; /* Отступ справа для блока с номером телефона и меню */
     }
 }
 
+/* Стили для мобильных устройств */
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
