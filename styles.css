@@ -79,7 +79,14 @@ header {
     font-size: 24px;
     margin: 20px 0;
     text-transform: uppercase;
-    transition: color 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px); /* Изначально смещаем текст вниз */
+    transition: opacity 0.9s ease, transform 0.9s ease; /* Плавное появление текста */
+}
+
+.nav-menu.show a {
+    opacity: 1;
+    transform: translateY(0); /* Перемещаем текст на место */
 }
 
 .nav-menu a:hover {
