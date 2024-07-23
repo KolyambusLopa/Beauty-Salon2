@@ -10,6 +10,11 @@ body {
     font-size: 16px;
 }
 
+/* Специфичные стили для страниц с классом black-bg */
+.black-bg {
+    background: #000;
+}
+
 header {
     position: fixed;
     top: 0;
