@@ -8,6 +8,11 @@ body {
     height: 100%;
 }
 
+.black-bg {
+    background: black;
+    color: white;
+}
+
 header {
     position: fixed;
     top: 0;
@@ -107,10 +112,4 @@ footer {
     .logo {
         font-size: 28px;
     }
-}
-
-/* Черный фон для всех страниц, кроме главной */
-.black-bg {
-    background-color: black;
-    color: white;
 }
