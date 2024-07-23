@@ -13,7 +13,6 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003;
-    padding: 0 20px;
     background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для шапки, чтобы было видно её на фоне */
 }
 
@@ -23,7 +22,8 @@ header {
     align-items: center;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .logo {
@@ -31,8 +31,7 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    margin-left: 0; /* Убедитесь, что логотип находится слева */
-    margin-right: auto; /* Сдвигаем логотип влево */
+    margin-left: 20px; /* Отступ от левого края экрана */
 }
 
 .header-right {
@@ -45,13 +44,14 @@ header {
     text-decoration: none;
     font-size: 14px;
     margin-right: 20px;
+    white-space: nowrap; /* Не переносить текст на новую строку */
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 20px;
+    margin-left: 20px; /* Отступ от номера телефона */
 }
 
 .bar {
@@ -156,7 +156,6 @@ footer {
 @media screen and (max-width: 768px) {
     .logo {
         font-size: 28px;
-        margin-left: 0;
     }
 
     .phone-number {
