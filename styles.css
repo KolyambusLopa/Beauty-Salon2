@@ -18,7 +18,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003; /* Увеличиваем z-index чтобы заголовок был выше меню */
-    padding: 0 20px; /* Добавляем отступы по бокам для выравнивания */
+    padding: 0 10px; /* Уменьшаем отступы по бокам */
 }
 
 .header-container {
@@ -47,7 +47,7 @@ header {
     color: white;
     text-decoration: none;
     font-size: 16px; /* Уменьшаем размер текста номера телефона */
-    margin-right: 20px;
+    margin-right: 10px; /* Уменьшаем отступ справа */
     z-index: 1004; /* Увеличиваем z-index чтобы номер телефона был выше меню */
 }
 
@@ -167,8 +167,12 @@ footer {
         display: none; /* Скрываем номер телефона на мобильных устройствах */
     }
 
+    .hamburger {
+        margin-left: 10px; /* Сдвигаем кнопку меню левее */
+    }
+
     .nav-menu {
-        padding-bottom: 60px; /* Добавляем отступ внизу для номера телефона */
+        padding-bottom: 80px; /* Добавляем отступ внизу для номера телефона */
     }
 
     .nav-menu:after {
@@ -178,5 +182,6 @@ footer {
         margin-top: auto;
         padding: 10px;
         text-align: center;
+        display: block; /* Убедитесь, что номер телефона отображается */
     }
 }
