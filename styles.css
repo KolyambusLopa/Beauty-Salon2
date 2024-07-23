@@ -13,7 +13,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1003;
-    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для шапки, чтобы было видно её на фоне */
+    background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон для шапки */
 }
 
 .header-container {
@@ -31,7 +31,7 @@ header {
     text-decoration: none;
     font-size: 36px;
     font-weight: bold;
-    margin-left: 20px; /* Отступ от левого края экрана */
+    margin-left: 10px; /* Уменьшен отступ от левого края */
 }
 
 .header-right {
@@ -44,14 +44,12 @@ header {
     text-decoration: none;
     font-size: 14px;
     margin-right: 20px;
-    white-space: nowrap; /* Не переносить текст на новую строку */
 }
 
 .hamburger {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-left: 20px; /* Отступ от номера телефона */
 }
 
 .bar {
@@ -167,14 +165,13 @@ footer {
     }
 
     .nav-menu {
-        padding-bottom: 80px;
+        padding-bottom: 60px; /* Добавить отступ снизу для номера телефона */
     }
 
     .nav-menu:after {
         content: "+371 25 130 884";
         color: white;
         font-size: 14px;
-        margin-top: auto;
         padding: 10px;
         text-align: center;
         display: block;
