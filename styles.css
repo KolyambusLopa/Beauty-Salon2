@@ -127,6 +127,10 @@ header {
     transition-delay: 1.2s;
     visibility: visible;
 }
+.nav-menu.show a:nth-child(7) {
+    transition-delay: 1.4s;
+    visibility: visible;
+}
 
 .nav-menu.show a {
     opacity: 1;
