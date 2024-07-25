@@ -96,7 +96,6 @@ header {
     color: white;
     text-decoration: none;
     font-size: 24px;
-    font-weight: 700; /* Увеличить толщину шрифта */
     margin: 20px 0;
     opacity: 0;
     transform: translateY(20px);
@@ -210,12 +209,7 @@ footer {
     }
 
     /* Удаление кнопок текущей страницы на мобильных устройствах */
-    .nav-menu.show a[href="about.html"].current-page,
-    .nav-menu.show a[href="booking.html"].current-page,
-    .nav-menu.show a[href="services.html"].current-page,
-    .nav-menu.show a[href="prices.html"].current-page,
-    .nav-menu.show a[href="gallery.html"].current-page,
-    .nav-menu.show a[href="contact.html"].current-page {
+    .nav-menu.show a.current-page {
         display: none;
     }
 }
@@ -227,5 +221,29 @@ footer {
     left: 10px;
     color: white;
     font-size: 12px;
-    font-weight: 700;
+    font-family: 'Arial', sans-serif; /* Строгий современный шрифт */
+    font-weight: 400; /* Убрать жирность */
+    text-transform: uppercase; /* Капс для кнопок социальных сетей */
+}
+
+/* Кнопки социальных сетей */
+.social-links {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    font-family: 'Arial', sans-serif; /* Строгий современный шрифт */
+    font-weight: 400; /* Убрать жирность */
+    text-transform: uppercase; /* Капс для кнопок социальных сетей */
+    color: white;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.social-links a:hover {
+    color: #ddd;
 }
