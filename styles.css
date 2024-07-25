@@ -78,11 +78,11 @@ header {
     background-color: rgba(0, 0, 0, 0.9);
     transform: translateX(-100%);
     opacity: 0;
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.9s ease, transform 0.9s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 60px;
+    padding-top: 100px; /* Опустить кнопки меню немного ниже */
     z-index: 1002;
 }
 
@@ -96,10 +96,11 @@ header {
     color: white;
     text-decoration: none;
     font-size: 24px;
+    font-weight: 700; /* Увеличить толщину шрифта */
     margin: 20px 0;
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
+    transition: opacity 0.9s ease, transform 0.9s ease;
 }
 
 .nav-menu.show a {
@@ -156,6 +157,7 @@ footer {
 .footer-content p {
     margin: 0;
     font-size: 8px;
+    display: none; /* Удалить надпись со всех страниц */
 }
 
 /* Стили для компьютеров */
@@ -167,6 +169,10 @@ footer {
 
     .header-right {
         margin-left: auto;
+    }
+
+    .phone-number-mobile {
+        display: none; /* Номер телефона на компьютерах скрыт */
     }
 }
 
@@ -194,7 +200,7 @@ footer {
         font-size: 14px;
         opacity: 0;
         transform: translateY(20px);
-        transition: opacity 0.5s ease, transform 0.5s ease;
+        transition: opacity 0.9s ease, transform 0.9s ease;
     }
 
     .nav-menu.show .phone-number-mobile {
