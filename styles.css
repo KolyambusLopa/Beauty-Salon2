@@ -208,4 +208,12 @@ footer {
         transform: translateY(0);
         transition-delay: 1.6s;
     }
+
+    /* Удаление кнопок текущей страницы на мобильных устройствах */
+    .nav-menu.show a[href="about.html"] {
+        display: none;
+    }
+    .nav-menu.show a[href="booking.html"] {
+        display: none;
+    }
 }
