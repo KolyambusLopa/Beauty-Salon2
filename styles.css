@@ -210,10 +210,22 @@ footer {
     }
 
     /* Удаление кнопок текущей страницы на мобильных устройствах */
-    .nav-menu.show a[href="about.html"] {
+    .nav-menu.show a[href="about.html"].current-page,
+    .nav-menu.show a[href="booking.html"].current-page,
+    .nav-menu.show a[href="services.html"].current-page,
+    .nav-menu.show a[href="prices.html"].current-page,
+    .nav-menu.show a[href="gallery.html"].current-page,
+    .nav-menu.show a[href="contact.html"].current-page {
         display: none;
     }
-    .nav-menu.show a[href="booking.html"] {
-        display: none;
-    }
+}
+
+/* Нумерация страниц */
+.page-number {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    color: white;
+    font-size: 12px;
+    font-weight: 700;
 }
