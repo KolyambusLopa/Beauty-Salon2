@@ -59,4 +59,10 @@ document.addEventListener('DOMContentLoaded', () => {
             el.textContent = el.getAttribute(`data-lang-${lang}`);
         });
     }
+
+    // Изменение URL-адреса без расширений
+    const links = document.querySelectorAll('a[href$=".html"]');
+    links.forEach(link => {
+        link.setAttribute('href', link.getAttribute('href').replace('.html', ''));
+    });
 });
