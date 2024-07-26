@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const hamburger = document.getElementById('hamburger');
     const menu = document.getElementById('menu');
+    const langButtons = document.querySelectorAll('.language-selector button');
 
     if (hamburger && menu) {
         hamburger.addEventListener('click', () => {
@@ -40,6 +41,22 @@ document.addEventListener('DOMContentLoaded', () => {
         links.forEach(link => {
             link.style.opacity = '0';
             link.style.transform = 'translateY(20px)';
+        });
+    }
+
+    langButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            langButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            const lang = button.getAttribute('data-lang');
+            changeLanguage(lang);
+        });
+    });
+
+    function changeLanguage(lang) {
+        const elements = document.querySelectorAll('[data-lang-content]');
+        elements.forEach(el => {
+            el.textContent = el.getAttribute(`data-lang-${lang}`);
         });
     }
 });
