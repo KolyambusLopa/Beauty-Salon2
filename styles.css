@@ -68,6 +68,38 @@ header {
     margin: 3px 0;
 }
 
+/* Языковые кнопки */
+.language-selector {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    align-items: center;
+    margin-top: 10px;
+    position: absolute;
+    right: 20px; /* Справа */
+    top: 50px; /* Под кнопкой меню */
+    z-index: 1004;
+}
+
+.language-selector button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 12px; /* Уменьшить размер */
+    font-family: 'Arial', sans-serif; /* Строгий современный шрифт */
+    font-weight: 400; /* Убрать жирность */
+    text-transform: uppercase; /* Капс для кнопок социальных сетей */
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+.language-selector button:hover {
+    color: #ddd;
+}
+
+.language-selector button.active {
+    font-weight: bold;
+}
+
 /* Меню */
 .nav-menu {
     position: fixed;
@@ -246,32 +278,4 @@ footer {
 
 .social-links a:hover {
     color: #ddd;
-}
-
-/* Языковые кнопки */
-.language-selector {
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение */
-    align-items: center;
-    margin-top: 10px;
-}
-
-.language-selector button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 12px; /* Уменьшить размер */
-    font-family: 'Arial', sans-serif; /* Строгий современный шрифт */
-    font-weight: 400; /* Убрать жирность */
-    text-transform: uppercase; /* Капс для кнопок социальных сетей */
-    margin: 5px 0;
-    cursor: pointer;
-}
-
-.language-selector button:hover {
-    color: #ddd;
-}
-
-.language-selector button.active {
-    font-weight: bold;
 }
