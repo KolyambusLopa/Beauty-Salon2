@@ -251,7 +251,7 @@ footer {
 /* Языковые кнопки */
 .language-selector {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* Вертикальное расположение */
     align-items: center;
     margin-top: 10px;
 }
@@ -260,10 +260,12 @@ footer {
     background: none;
     border: none;
     color: white;
-    font-size: 16px;
-    margin: 0 10px;
+    font-size: 12px; /* Уменьшить размер */
+    font-family: 'Arial', sans-serif; /* Строгий современный шрифт */
+    font-weight: 400; /* Убрать жирность */
+    text-transform: uppercase; /* Капс для кнопок социальных сетей */
+    margin: 5px 0;
     cursor: pointer;
-    text-transform: uppercase;
 }
 
 .language-selector button:hover {
