@@ -73,7 +73,6 @@ header {
     display: flex;
     flex-direction: column;
     position: absolute;
-    right: 10px;
     top: 70px;
 }
 
@@ -217,6 +216,41 @@ footer {
     margin-left: 10px;
 }
 
+/* Стрелки для переключения между страницами */
+.nav-arrows {
+    position: fixed;
+    bottom: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: white;
+}
+
+.nav-arrows a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav-arrows a::before {
+    content: '←';
+    margin-right: 5px;
+}
+
+.nav-arrows a.next::before {
+    content: '';
+    margin-right: 0;
+}
+
+.nav-arrows a.next::after {
+    content: '→';
+    margin-left: 5px;
+}
+
 /* Стили для компьютеров */
 @media screen and (min-width: 769px) {
     .header-container {
@@ -226,6 +260,10 @@ footer {
 
     .header-right {
         margin-left: auto;
+    }
+
+    .language-selector {
+        right: 10px;
     }
 }
 
@@ -266,5 +304,10 @@ footer {
         opacity: 1;
         transform: translateY(0);
         transition-delay: 1.6s;
+    }
+
+    /* Языковые кнопки */
+    .language-selector {
+        right: 40px; /* Сдвигаем правее */
     }
 }
