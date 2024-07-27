@@ -68,38 +68,6 @@ header {
     margin: 3px 0;
 }
 
-/* Языковые кнопки */
-.language-selector {
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение */
-    align-items: center;
-    margin-top: 10px;
-    position: absolute;
-    right: 20px; /* Справа */
-    top: 50px; /* Под кнопкой меню */
-    z-index: 1004;
-}
-
-.language-selector button {
-    background: none;
-    border: none;
-    color: white;
-    font-size: 12px; /* Уменьшить размер */
-    font-family: 'Arial', sans-serif; /* Строгий современный шрифт */
-    font-weight: 400; /* Убрать жирность */
-    text-transform: uppercase; /* Капс для кнопок социальных сетей */
-    margin: 5px 0;
-    cursor: pointer;
-}
-
-.language-selector button:hover {
-    color: #ddd;
-}
-
-.language-selector button.active {
-    font-weight: bold;
-}
-
 /* Меню */
 .nav-menu {
     position: fixed;
@@ -114,7 +82,7 @@ header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 100px; /* Опустить кнопки меню немного ниже */
+    padding-top: 60px;
     z-index: 1002;
 }
 
@@ -132,33 +100,37 @@ header {
     opacity: 0;
     transform: translateY(20px);
     transition: opacity 0.9s ease, transform 0.9s ease;
+    visibility: hidden;
+}
+
+.nav-menu.show a:nth-child(1) {
+    transition-delay: 0.2s;
+    visibility: visible;
+}
+.nav-menu.show a:nth-child(2) {
+    transition-delay: 0.4s;
+    visibility: visible;
+}
+.nav-menu.show a:nth-child(3) {
+    transition-delay: 0.6s;
+    visibility: visible;
+}
+.nav-menu.show a:nth-child(4) {
+    transition-delay: 0.8s;
+    visibility: visible;
+}
+.nav-menu.show a:nth-child(5) {
+    transition-delay: 1s;
+    visibility: visible;
+}
+.nav-menu.show a:nth-child(6) {
+    transition-delay: 1.2s;
+    visibility: visible;
 }
 
 .nav-menu.show a {
     opacity: 1;
     transform: translateY(0);
-}
-
-.nav-menu.show a:nth-child(1) {
-    transition-delay: 0.2s;
-}
-.nav-menu.show a:nth-child(2) {
-    transition-delay: 0.4s;
-}
-.nav-menu.show a:nth-child(3) {
-    transition-delay: 0.6s;
-}
-.nav-menu.show a:nth-child(4) {
-    transition-delay: 0.8s;
-}
-.nav-menu.show a:nth-child(5) {
-    transition-delay: 1s;
-}
-.nav-menu.show a:nth-child(6) {
-    transition-delay: 1.2s;
-}
-.nav-menu.show a:nth-child(7) {
-    transition-delay: 1.4s;
 }
 
 .nav-menu a:hover {
@@ -188,7 +160,38 @@ footer {
 .footer-content p {
     margin: 0;
     font-size: 8px;
-    display: none; /* Удалить надпись со всех страниц */
+}
+
+/* Нумерация страниц */
+.page-number {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: white;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+/* Социальные ссылки */
+.social-links {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: white;
+    z-index: 1000;
+    opacity: 0.8;
+}
+
+.social-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 10px;
 }
 
 /* Стили для компьютеров */
@@ -200,10 +203,6 @@ footer {
 
     .header-right {
         margin-left: auto;
-    }
-
-    .phone-number-mobile {
-        display: none; /* Номер телефона на компьютерах скрыт */
     }
 }
 
@@ -225,6 +224,11 @@ footer {
         padding-bottom: 60px;
     }
 
+    .nav-menu.show a:nth-child(7) {
+        transition-delay: 1.4s;
+        visibility: visible;
+    }
+
     .phone-number-mobile {
         color: white;
         text-decoration: none;
@@ -232,6 +236,7 @@ footer {
         opacity: 0;
         transform: translateY(20px);
         transition: opacity 0.9s ease, transform 0.9s ease;
+        visibility: hidden;
     }
 
     .nav-menu.show .phone-number-mobile {
@@ -240,42 +245,8 @@ footer {
         transition-delay: 1.6s;
     }
 
-    /* Удаление кнопок текущей страницы на мобильных устройствах */
-    .nav-menu.show a.current-page {
-        display: none;
+    /* Языковые кнопки */
+    .language-selector {
+        right: 40px; /* Сдвигаем правее */
     }
-}
-
-/* Нумерация страниц */
-.page-number {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    color: white;
-    font-size: 12px;
-    font-family: 'Arial', sans-serif; /* Строгий современный шрифт */
-    font-weight: 400; /* Убрать жирность */
-    text-transform: uppercase; /* Капс для кнопок социальных сетей */
-}
-
-/* Кнопки социальных сетей */
-.social-links {
-    position: fixed;
-    bottom: 10px;
-    right: 10px;
-    font-size: 12px;
-    font-family: 'Arial', sans-serif; /* Строгий современный шрифт */
-    font-weight: 400; /* Убрать жирность */
-    text-transform: uppercase; /* Капс для кнопок социальных сетей */
-    color: white;
-}
-
-.social-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 10px;
-}
-
-.social-links a:hover {
-    color: #ddd;
 }
