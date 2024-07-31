@@ -11,13 +11,13 @@ document.addEventListener('DOMContentLoaded', () => {
                 animateMenuLinks();
                 const currentPageLink = document.querySelector('.nav-menu a.current-page');
                 if (currentPageLink) {
-                    currentPageLink.classList.add('hide');
+                    currentPageLink.style.display = 'none';
                 }
             } else {
                 resetMenuLinks();
                 const currentPageLink = document.querySelector('.nav-menu a.current-page');
                 if (currentPageLink) {
-                    currentPageLink.classList.remove('hide');
+                    currentPageLink.style.display = 'block';
                 }
             }
         });
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     resetMenuLinks();
                     const currentPageLink = document.querySelector('.nav-menu a.current-page');
                     if (currentPageLink) {
-                        currentPageLink.classList.remove('hide');
+                        currentPageLink.style.display = 'block';
                     }
                 }
             }
