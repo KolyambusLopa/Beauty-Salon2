@@ -263,7 +263,8 @@ footer {
     }
 
     .language-selector {
-        right: 10px;
+        right: 0; /* Сдвигаем левее */
+        top: 70px; /* Сдвигаем ниже */
     }
 }
 
@@ -308,6 +309,7 @@ footer {
 
     /* Языковые кнопки */
     .language-selector {
-        right: 40px; /* Сдвигаем правее */
+        right: 20px; /* Сдвигаем правее */
+        top: 90px; /* Сдвигаем ниже */
     }
 }
