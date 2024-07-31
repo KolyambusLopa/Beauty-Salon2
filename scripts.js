@@ -9,16 +9,8 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.toggle('show');
             if (menu.classList.contains('show')) {
                 animateMenuLinks();
-                const currentPageLink = document.querySelector('.nav-menu a.current-page');
-                if (currentPageLink) {
-                    currentPageLink.style.display = 'none';
-                }
             } else {
                 resetMenuLinks();
-                const currentPageLink = document.querySelector('.nav-menu a.current-page');
-                if (currentPageLink) {
-                    currentPageLink.style.display = 'block';
-                }
             }
         });
 
@@ -27,10 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (menu.classList.contains('show')) {
                     menu.classList.remove('show');
                     resetMenuLinks();
-                    const currentPageLink = document.querySelector('.nav-menu a.current-page');
-                    if (currentPageLink) {
-                        currentPageLink.style.display = 'block';
-                    }
                 }
             }
         });
