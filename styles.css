@@ -74,6 +74,7 @@ header {
     flex-direction: column;
     position: absolute;
     top: 70px;
+    right: 10px;
 }
 
 .language-selector button {
@@ -263,8 +264,8 @@ footer {
     }
 
     .language-selector {
-        right: 0; /* Сдвигаем левее */
-        top: 70px; /* Сдвигаем ниже */
+        top: 90px;
+        right: 40px;
     }
 }
 
@@ -309,7 +310,7 @@ footer {
 
     /* Языковые кнопки */
     .language-selector {
-        right: 20px; /* Сдвигаем правее */
-        top: 90px; /* Сдвигаем ниже */
+        top: 100px;
+        right: 10px;
     }
 }
