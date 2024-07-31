@@ -150,6 +150,10 @@ header {
     transition-delay: 1.2s;
     visibility: visible;
 }
+.nav-menu.show a:nth-child(7) {
+    transition-delay: 1.4s;
+    visibility: visible;
+}
 
 .nav-menu.show a {
     opacity: 1;
@@ -265,7 +269,7 @@ footer {
 
     .language-selector {
         top: 90px;
-        right: 40px;
+        right: 0;
     }
 }
 
@@ -287,8 +291,8 @@ footer {
         padding-bottom: 60px;
     }
 
-    .nav-menu.show a:nth-child(7) {
-        transition-delay: 1.4s;
+    .nav-menu.show a:nth-child(8) {
+        transition-delay: 1.6s;
         visibility: visible;
     }
 
@@ -305,12 +309,12 @@ footer {
     .nav-menu.show .phone-number-mobile {
         opacity: 1;
         transform: translateY(0);
-        transition-delay: 1.6s;
+        transition-delay: 1.8s;
     }
 
     /* Языковые кнопки */
     .language-selector {
-        top: 100px;
-        right: 10px;
+        top: 90px;
+        right: 20px;
     }
 }
