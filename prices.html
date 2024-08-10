@@ -13,30 +13,13 @@
     </style>
 </head>
 <body class="black-bg">
-    <header>
-        <div class="header-container">
-            <a href="/" class="logo" data-lang-content data-lang-ru="Raspberry" data-lang-en="Raspberry" data-lang-lv="Raspberry">Raspberry</а>
-            <div class="header-right">
-                <a href="tel:+37125130884" class="phone-number">+371 25 130 884</a>
-                <div class="hamburger" id="hamburger">
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                    <div class="bar"></div>
-                </div>
-            </div>
-        </div>
-        <div class="language-selector">
-            <button data-lang="ru" class="active">RU</button>
-            <button data-lang="en">EN</button>
-            <button data-lang="lv">LV</button>
-        </div>
-    </header>
+    <div id="header"></div>
     <nav id="menu" class="nav-menu">
         <a href="about.html" data-lang-content data-lang-ru="О нас" data-lang-en="About Us" data-lang-lv="Par Mums">О нас</a>
-        <a href="booking.html" data-lang-content data-lang-ru="Запись" data-lang-en="Booking" data-lang-lv="Pieteikšanās">Запись</а>
-        <a href="services.html" data-lang-content data-lang-ru="Услуги" data-lang-en="Services" data-lang-lv="Pakalpojumi">Услуги</а>
+        <a href="booking.html" data-lang-content data-lang-ru="Запись" data-lang-en="Booking" data-lang-lv="Pieteikšanās">Запись</a>
+        <a href="services.html" data-lang-content data-lang-ru="Услуги" data-lang-en="Services" data-lang-lv="Pakalpojumi">Услуги</a>
         <a href="prices.html" class="current-page" data-lang-content data-lang-ru="Цены" data-lang-en="Prices" data-lang-lv="Cenas">Цены</a>
-        <a href="gallery.html" data-lang-content data-lang-ru="Галерея" data-lang-en="Gallery" data-lang-lv="Galerija">Галерея</a>
+        <a href="gallery.html" data-lang-content data-lang-ru="Галерея" data-lang-en="Gallery" data-lang-lv="Galerija">Галерея</а>
         <a href="contact.html" data-lang-content data-lang-ru="Контакты" data-lang-en="Contact" data-lang-lv="Kontakti">Контакты</a>
         <a href="tel:+37125130884" class="phone-number-mobile">+371 25 130 884</a>
     </nav>
@@ -44,20 +27,14 @@
         <h1 data-lang-content data-lang-ru="Цены" data-lang-en="Prices" data-lang-lv="Cenas">Цены</h1>
         <!-- Контент страницы Цены -->
     </main>
-    <footer>
-        <div class="footer-content">
-            <!-- Удалить надпись -->
-        </div>
-    </footer>
-    <div class="page-number">05/07</div>
-    <div class="social-links">
-        <a href="https://www.instagram.com/_raspberry___brows_?igsh=eDJrbjY2b2h6bXJq">Instagram</a>
-        <a href="#">Facebook</a>
-    </div>
-    <div class="nav-arrows">
-        <a href="services.html" class="prev">Услуги</a>
-        <a href="gallery.html" class="next">Галерея</a>
-    </div>
+    <div id="footer"></div>
+    <div id="nav-arrows"></div>
+
     <script src="scripts.js"></script>
+    <script>
+        document.getElementById('header').innerHTML = await fetch('header.html').then(response => response.text());
+        document.getElementById('footer').innerHTML = await fetch('footer.html').then(response => response.text().then(html => html.replace('PAGE_NUMBER', '05/07')));
+        document.getElementById('nav-arrows').innerHTML = await fetch('nav-arrows.html').then(response => response.text().then(html => html.replace('PREVIOUS_PAGE', 'services.html').replace('NEXT_PAGE', 'gallery.html')));
+    </script>
 </body>
 </html>
