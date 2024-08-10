@@ -73,8 +73,8 @@ header {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 70px;
-    right: 10px;
+    top: 50px; /* Сдвинули ниже под кнопку меню */
+    right: 10px; /* Расположение справа */
 }
 
 .language-selector button {
@@ -228,7 +228,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
+    padding: 0 40px; /* Сдвинули стрелки внутрь экрана */
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     color: white;
@@ -268,8 +268,8 @@ footer {
     }
 
     .language-selector {
-        top: 90px;
-        right: 0;
+        top: 70px; /* Подправляем позицию для десктопа */
+        right: 10px;
     }
 }
 
@@ -314,7 +314,7 @@ footer {
 
     /* Языковые кнопки */
     .language-selector {
-        top: 90px;
+        top: 90px; /* Позиция для мобильных устройств */
         right: 20px;
     }
 }
