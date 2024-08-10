@@ -75,7 +75,7 @@ header {
     flex-direction: column;
     position: absolute;
     top: 50px; /* Сдвинули ниже под кнопку меню */
-    right: 10px; /* Совпадает с кнопкой меню */
+    right: 20px; /* Совпадает с кнопкой меню */
 }
 
 .language-selector button {
