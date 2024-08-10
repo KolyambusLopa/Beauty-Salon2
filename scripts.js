@@ -3,6 +3,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const menu = document.getElementById('menu');
     const langButtons = document.querySelectorAll('.language-selector button');
 
+    // Проверка на наличие сохраненного языка и его установка
+    const savedLang = localStorage.getItem('selectedLanguage');
+    if (savedLang) {
+        changeLanguage(savedLang);
+        langButtons.forEach(button => {
+            button.classList.remove('active');
+            if (button.getAttribute('data-lang') === savedLang) {
+                button.classList.add('active');
+            }
+        });
+    }
+
     if (hamburger && menu) {
         hamburger.addEventListener('click', () => {
             // Открытие и закрытие меню с анимацией
@@ -46,10 +58,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     langButtons.forEach(button => {
         button.addEventListener('click', () => {
+            const selectedLang = button.getAttribute('data-lang');
+            localStorage.setItem('selectedLanguage', selectedLang); // Сохранение языка
             langButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
-            const lang = button.getAttribute('data-lang');
-            changeLanguage(lang);
+            changeLanguage(selectedLang);
         });
     });
 
