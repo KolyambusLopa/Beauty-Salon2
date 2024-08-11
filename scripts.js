@@ -17,7 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hamburger && menu) {
         hamburger.addEventListener('click', () => {
-            // Открытие и закрытие меню с анимацией
             menu.classList.toggle('show');
             if (menu.classList.contains('show')) {
                 animateMenuLinks();
@@ -59,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
     langButtons.forEach(button => {
         button.addEventListener('click', () => {
             const selectedLang = button.getAttribute('data-lang');
-            localStorage.setItem('selectedLanguage', selectedLang); // Сохранение языка
+            localStorage.setItem('selectedLanguage', selectedLang);
             langButtons.forEach(btn => btn.classList.remove('active'));
             button.classList.add('active');
             changeLanguage(selectedLang);
