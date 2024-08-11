@@ -4,6 +4,7 @@ body {
     padding: 0;
     box-sizing: border-box;
     height: 100%;
+    background-color: #000;
 }
 
 /* Стиль для главной страницы с фоном */
@@ -74,7 +75,7 @@ header {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 50px; /* Сдвинули ниже под кнопку меню */
+    top: 50px;
     right: 10px; /* Совпадает с кнопкой меню */
 }
 
@@ -90,6 +91,50 @@ header {
 
 .language-selector button.active {
     font-weight: bold;
+}
+
+/* Основной контент на главной странице */
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 15%;
+    transform: translateY(-50%);
+    color: white;
+    text-align: left;
+}
+
+.main-content h2 {
+    font-size: 60px;
+    margin: 0;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.main-content h3 {
+    font-size: 36px;
+    margin-top: 10px;
+    font-weight: 400;
+}
+
+.booking-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 18px;
+    background-color: #fff;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.booking-button:hover {
+    background-color: #000;
+    color: #fff;
 }
 
 /* Меню */
@@ -229,7 +274,7 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 -10px; /* Сдвинули ближе к центру */
+    padding: 0 -10px;
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     color: white;
@@ -269,8 +314,8 @@ footer {
     }
 
     .language-selector {
-        top: 70px; /* Подправляем позицию для десктопа */
-        right: 27px; /* Сдвигаем под кнопку меню */
+        top: 70px;
+        right: 27px;
     }
 }
 
@@ -313,43 +358,12 @@ footer {
         transition-delay: 1.8s;
     }
 
-    /* Языковые кнопки */
     .language-selector {
-        top: 90px; /* Позиция для мобильных устройств */
-        right: 10px; /* Сдвиг под кнопку меню для мобильных */
+        top: 90px;
+        right: 10px;
+    }
+
+    .main-content {
+        left: 10%;
     }
 }
-.main-content {
-    position: absolute;
-    top: 50%;
-    left: 10%;
-    transform: translateY(-50%);
-    color: white;
-    font-family: 'Montserrat', sans-serif;
-    text-align: left;
-}
-
-.main-content h2 {
-    font-size: 48px;
-    margin: 0;
-    font-weight: bold;
-}
-
-.main-content h3 {
-    font-size: 24px;
-    margin-top: 10px;
-}
-
-.booking-button {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    text-align: center;
-}
-
