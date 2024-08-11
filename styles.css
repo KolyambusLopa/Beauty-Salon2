@@ -319,3 +319,37 @@ footer {
         right: 10px; /* Сдвиг под кнопку меню для мобильных */
     }
 }
+.main-content {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+}
+
+.main-content h2 {
+    font-size: 48px;
+    margin: 0;
+    font-weight: bold;
+}
+
+.main-content h3 {
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.booking-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+}
+
