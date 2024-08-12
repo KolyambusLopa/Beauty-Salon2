@@ -96,7 +96,7 @@ header {
 /* Основной контент на главной странице */
 .main-content {
     position: absolute;
-    top: 50%;
+    top: 550%;
     left: 15%;
     transform: translateY(-50%);
     color: white;
