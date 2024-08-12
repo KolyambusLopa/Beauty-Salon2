@@ -60,7 +60,7 @@ header {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    margin-right: 10px; /* Отступ справа для выравнивания с языковыми кнопками */
+    margin-right: 10px;
 }
 
 .bar {
@@ -76,7 +76,7 @@ header {
     flex-direction: column;
     position: absolute;
     top: 50px;
-    right: 10px; /* Совпадает с кнопкой меню */
+    right: 10px;
 }
 
 .language-selector button {
@@ -96,7 +96,7 @@ header {
 /* Основной контент на главной странице */
 .main-content {
     position: absolute;
-    top: 550%;
+    top: 50%;
     left: 15%;
     transform: translateY(-50%);
     color: white;
@@ -104,31 +104,32 @@ header {
 }
 
 .main-content h2 {
-    font-size: 60px;
+    font-size: 48px;
     margin: 0;
-    font-weight: 700;
+    font-weight: 600;
     text-transform: uppercase;
+    line-height: 1.2;
 }
 
 .main-content h3 {
-    font-size: 36px;
-    margin-top: 10px;
+    font-size: 24px;
+    margin-top: 5px;
     font-weight: 400;
 }
 
 .booking-button {
     display: inline-block;
-    margin-top: 20px;
-    padding: 15px 40px;
-    font-size: 18px;
+    margin-top: 15px;
+    padding: 10px 30px;
+    font-size: 16px;
     background-color: #fff;
     color: #000;
     text-decoration: none;
     border-radius: 5px;
-    font-weight: 600;
+    font-weight: 500;
     text-align: center;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     transition: background-color 0.3s, color 0.3s;
 }
 
