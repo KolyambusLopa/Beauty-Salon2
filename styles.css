@@ -1,5 +1,5 @@
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -83,7 +83,7 @@ header {
     background: none;
     border: none;
     color: white;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 14px;
     cursor: pointer;
     margin: 5px 0;
@@ -96,7 +96,7 @@ header {
 /* Основной контент на главной странице */
 .main-content {
     position: absolute;
-    top: 550%; /* Возвращаем на 550% */
+    top: 550%;
     left: 15%;
     transform: translateY(-50%);
     color: white;
@@ -104,15 +104,15 @@ header {
 }
 
 .main-content h2 {
-    font-size: 40px; /* Уменьшаем размер шрифта */
+    font-size: 42px;
     margin: 0;
-    font-weight: 500;
+    font-weight: 700;
     text-transform: uppercase;
     line-height: 1.2;
 }
 
 .main-content h2 .city {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 400;
     margin-left: 10px;
 }
@@ -120,8 +120,8 @@ header {
 .booking-button {
     display: inline-block;
     margin-top: 10px;
-    padding: 6px 15px; /* Уменьшаем размер кнопки */
-    font-size: 12px;  /* Уменьшаем размер текста на кнопке */
+    padding: 6px 20px;
+    font-size: 14px;
     background-color: #fff;
     color: #000;
     text-decoration: none;
@@ -242,7 +242,7 @@ footer {
     bottom: 0;
     left: 0;
     padding: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 12px;
     color: white;
     z-index: 1000;
@@ -255,7 +255,7 @@ footer {
     bottom: 0;
     right: 0;
     padding: 10px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 12px;
     color: white;
     z-index: 1000;
@@ -276,7 +276,7 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 0 20px;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto Slab', serif;
     font-size: 12px;
     color: white;
 }
