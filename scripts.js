@@ -68,7 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
     function changeLanguage(lang) {
         const elements = document.querySelectorAll('[data-lang-content]');
         elements.forEach(el => {
-            el.textContent = el.getAttribute(`data-lang-${lang}`);
+            const fixedText = el.getAttribute('data-lang-content');
+            if (fixedText) {
+                el.textContent = fixedText;
+            } else {
+                el.textContent = el.getAttribute(`data-lang-${lang}`);
+            }
         });
     }
 });
