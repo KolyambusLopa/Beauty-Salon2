@@ -120,8 +120,8 @@ header {
 .booking-button {
     display: inline-block;
     margin-top: 10px;
-    padding: 6px 20px;
-    font-size: 14px;
+    padding: 4px 15px; /* Уменьшаем размер кнопки */
+    font-size: 12px;  /* Уменьшаем размер текста на кнопке */
     background-color: #fff;
     color: #000;
     text-decoration: none;
