@@ -1,5 +1,5 @@
 body {
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -83,7 +83,7 @@ header {
     background: none;
     border: none;
     color: white;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     cursor: pointer;
     margin: 5px 0;
@@ -96,7 +96,7 @@ header {
 /* Основной контент на главной странице */
 .main-content {
     position: absolute;
-    top: 550%;
+    top: 40%;
     left: 15%;
     transform: translateY(-50%);
     color: white;
@@ -114,14 +114,14 @@ header {
 .main-content h3.city {
     font-size: 28px;
     font-weight: 400;
-    margin: 10px 0;
+    margin-top: 15px;
 }
 
 .booking-button {
     display: inline-block;
     margin-top: 10px;
-    padding: 4px 15px; /* Уменьшаем размер кнопки */
-    font-size: 12px;  /* Уменьшаем размер текста на кнопке */
+    padding: 4px 15px;
+    font-size: 12px;
     background-color: #fff;
     color: #000;
     text-decoration: none;
@@ -242,7 +242,7 @@ footer {
     bottom: 0;
     left: 0;
     padding: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     color: white;
     z-index: 1000;
@@ -255,7 +255,7 @@ footer {
     bottom: 0;
     right: 0;
     padding: 10px;
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     color: white;
     z-index: 1000;
@@ -275,8 +275,8 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px;
-    font-family: 'Roboto Slab', serif;
+    padding: 0 40px;
+    font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     color: white;
 }
