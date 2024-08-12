@@ -111,10 +111,10 @@ header {
     line-height: 1.2;
 }
 
-.main-content h2 .city {
+.main-content h3.city {
     font-size: 28px;
     font-weight: 400;
-    margin-left: 10px;
+    margin: 10px 0;
 }
 
 .booking-button {
