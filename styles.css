@@ -1,5 +1,5 @@
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -83,7 +83,7 @@ header {
     background: none;
     border: none;
     color: white;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 14px;
     cursor: pointer;
     margin: 5px 0;
@@ -96,7 +96,7 @@ header {
 /* Основной контент на главной странице */
 .main-content {
     position: absolute;
-    top: 550%;
+    top: 550%; /* Возвращаем на 550% */
     left: 15%;
     transform: translateY(-50%);
     color: white;
@@ -104,28 +104,28 @@ header {
 }
 
 .main-content h2 {
-    font-size: 48px;
+    font-size: 40px; /* Уменьшаем размер шрифта */
     margin: 0;
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     line-height: 1.2;
 }
 
-.main-content h3 {
+.main-content h2 .city {
     font-size: 24px;
-    margin-top: 5px;
     font-weight: 400;
+    margin-left: 10px;
 }
 
 .booking-button {
     display: inline-block;
-    margin-top: 15px;
-    padding: 8px 20px; /* Уменьшаем размер кнопки */
-    font-size: 14px;  /* Уменьшаем размер текста на кнопке */
+    margin-top: 10px;
+    padding: 6px 15px; /* Уменьшаем размер кнопки */
+    font-size: 12px;  /* Уменьшаем размер текста на кнопке */
     background-color: #fff;
     color: #000;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 3px;
     font-weight: 500;
     text-align: center;
     text-transform: uppercase;
@@ -242,7 +242,7 @@ footer {
     bottom: 0;
     left: 0;
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     color: white;
     z-index: 1000;
@@ -255,7 +255,7 @@ footer {
     bottom: 0;
     right: 0;
     padding: 10px;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     color: white;
     z-index: 1000;
@@ -275,8 +275,8 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 20px; /* Восстанавливаем предыдущие отступы */
-    font-family: 'Montserrat', sans-serif;
+    padding: 0 20px;
+    font-family: 'Poppins', sans-serif;
     font-size: 12px;
     color: white;
 }
