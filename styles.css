@@ -272,13 +272,14 @@ footer {
 .nav-arrows {
     position: fixed;
     bottom: 50px;
-    width: 100%;
+    width: calc(100% - 40px); /* Уменьшена ширина, чтобы учесть отступы */
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 20px; /* Уменьшены отступы */
     font-family: 'Montserrat', sans-serif;
     font-size: 12px;
     color: white;
+    box-sizing: border-box; /* Учитываем паддинг в ширину */
 }
 
 .nav-arrows a {
@@ -286,6 +287,14 @@ footer {
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+.nav-arrows a.prev {
+    justify-content: flex-start; /* Кнопка слева */
+}
+
+.nav-arrows a.next {
+    justify-content: flex-end; /* Кнопка справа */
 }
 
 .nav-arrows a::before {
